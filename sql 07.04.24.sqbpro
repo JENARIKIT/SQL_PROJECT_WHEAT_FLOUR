@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/mahar/Desktop/SQL/SQL Project/sql 07.04.24.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query pragmas" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="14702"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainPROTEIN"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="B1" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="129"/><column index="2" value="175"/><column index="3" value="139"/><column index="4" value="195"/><column index="5" value="194"/><column index="6" value="66"/><column index="7" value="131"/><column index="8" value="110"/><column index="9" value="148"/><column index="10" value="104"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="BRAN" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="77"/><column index="2" value="96"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Bran" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="77"/><column index="2" value="86"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="CLEANING FLOUR" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="77"/><column index="2" value="96"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="CleaningFlour" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="77"/><column index="2" value="96"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="DOWNTIME" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="64"/><column index="2" value="40"/><column index="3" value="73"/><column index="4" value="79"/><column index="5" value="68"/><column index="6" value="77"/><column index="7" value="79"/><column index="8" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="DOWNTIME_GROUP" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="145"/><column index="3" value="109"/><column index="4" value="40"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Data_analyst1" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="175"/><column index="2" value="190"/><column index="3" value="81"/><column index="4" value="94"/><column index="5" value="66"/><column index="6" value="81"/><column index="7" value="72"/><column index="8" value="107"/><column index="9" value="83"/><column index="10" value="110"/><column index="11" value="104"/><column index="12" value="106"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Downgrade" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="63"/><column index="2" value="94"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="F3" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="157"/><column index="2" value="159"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="FG" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="84"/><column index="2" value="99"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="FG2" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="77"/><column index="2" value="104"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="FG_Recive" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="71"/><column index="2" value="63"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="FinalGI" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="96"/><column index="2" value="88"/><column index="3" value="299"/><column index="4" value="88"/><column index="5" value="104"/><column index="6" value="87"/><column index="7" value="106"/><column index="8" value="106"/><column index="9" value="111"/><column index="10" value="181"/><column index="11" value="77"/><column index="12" value="195"/><column index="13" value="163"/><column index="14" value="192"/><column index="15" value="103"/><column index="16" value="126"/><column index="17" value="104"/><column index="18" value="40"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="FinalTransaction" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="110"/><column index="2" value="88"/><column index="3" value="299"/><column index="4" value="88"/><column index="5" value="140"/><column index="6" value="106"/><column index="7" value="111"/><column index="8" value="181"/><column index="9" value="163"/><column index="10" value="72"/><column index="11" value="154"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="GI" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="102"/><column index="2" value="117"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="GR" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="96"/><column index="2" value="88"/><column index="3" value="134"/><column index="4" value="78"/><column index="5" value="87"/><column index="6" value="67"/><column index="7" value="106"/><column index="8" value="111"/><column index="9" value="181"/><column index="10" value="64"/><column index="11" value="163"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Group" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="145"/><column index="2" value="92"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="GroupDT" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="145"/><column index="2" value="92"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="IN_2023_FG" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="133"/><column index="2" value="71"/><column index="3" value="43"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="MASTER" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="4" mode="0"/></sort><column_widths><column index="1" value="115"/><column index="2" value="63"/><column index="3" value="113"/><column index="4" value="104"/><column index="5" value="96"/><column index="6" value="134"/><column index="7" value="135"/><column index="8" value="61"/><column index="9" value="49"/><column index="10" value="46"/><column index="11" value="67"/><column index="12" value="46"/><column index="13" value="57"/><column index="14" value="74"/><column index="15" value="74"/><column index="16" value="48"/><column index="17" value="63"/><column index="18" value="53"/><column index="19" value="62"/><column index="20" value="67"/><column index="21" value="49"/><column index="22" value="60"/><column index="23" value="60"/><column index="24" value="88"/><column index="25" value="76"/><column index="26" value="67"/><column index="27" value="94"/><column index="28" value="66"/><column index="29" value="84"/><column index="30" value="101"/><column index="31" value="101"/><column index="32" value="91"/><column index="33" value="90"/><column index="34" value="78"/><column index="35" value="89"/><column index="36" value="94"/><column index="37" value="76"/><column index="38" value="84"/><column index="39" value="198"/><column index="40" value="182"/><column index="41" value="180"/><column index="42" value="79"/><column index="43" value="198"/><column index="44" value="182"/><column index="45" value="207"/><column index="46" value="191"/><column index="47" value="196"/><column index="48" value="229"/><column index="49" value="163"/><column index="50" value="126"/><column index="51" value="79"/><column index="52" value="74"/><column index="53" value="83"/><column index="54" value="70"/><column index="55" value="158"/><column index="56" value="125"/><column index="57" value="142"/><column index="58" value="58"/><column index="59" value="114"/><column index="60" value="102"/><column index="61" value="86"/><column index="62" value="110"/><column index="63" value="143"/><column index="64" value="191"/><column index="65" value="159"/><column index="66" value="85"/><column index="67" value="81"/><column index="68" value="79"/><column index="69" value="89"/><column index="70" value="47"/><column index="71" value="51"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="MAT" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="300"/><column index="3" value="46"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="MATERIAL" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="77"/><column index="2" value="300"/><column index="3" value="46"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Masterdata" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="91"/><column index="2" value="134"/><column index="3" value="60"/><column index="4" value="74"/><column index="5" value="53"/><column index="6" value="60"/><column index="7" value="53"/><column index="8" value="83"/><column index="9" value="63"/><column index="10" value="85"/><column index="11" value="79"/><column index="12" value="81"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="PO" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="129"/><column index="2" value="280"/><column index="3" value="145"/><column index="4" value="151"/><column index="5" value="175"/><column index="6" value="164"/><column index="7" value="80"/><column index="8" value="288"/><column index="9" value="104"/><column index="10" value="105"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="PROCESSORDER" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="88"/><column index="2" value="155"/><column index="3" value="96"/><column index="4" value="108"/><column index="5" value="79"/><column index="6" value="80"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="PROTEIN" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="232"/><column index="3" value="81"/><column index="4" value="55"/><column index="5" value="94"/><column index="6" value="40"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="RM" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="167"/><column index="2" value="73"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Reprocess" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="40"/><column index="2" value="63"/><column index="3" value="94"/><column index="4" value="77"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Runtime" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="66"/><column index="2" value="72"/><column index="3" value="76"/><column index="4" value="63"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Startup" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="138"/><column index="2" value="182"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Tempwheat" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="126"/><column index="2" value="63"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Trade" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="144"/><column index="3" value="204"/><column index="4" value="84"/><column index="5" value="91"/><column index="6" value="99"/><column index="7" value="133"/><column index="8" value="40"/><column index="9" value="67"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Water" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="102"/><column index="2" value="105"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Wheat Bran" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="102"/><column index="2" value="98"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Wheat_Bran" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="160"/><column index="2" value="168"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="WorkingDay" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="153"/><column index="2" value="63"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="quality" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="66"/><column index="2" value="99"/><column index="3" value="40"/><column index="4" value="95"/><column index="5" value="165"/><column index="6" value="40"/><column index="7" value="40"/><column index="8" value="40"/><column index="9" value="46"/><column index="10" value="54"/><column index="11" value="57"/><column index="12" value="63"/><column index="13" value="85"/><column index="14" value="59"/><column index="15" value="40"/><column index="16" value="40"/><column index="17" value="40"/><column index="18" value="40"/><column index="19" value="95"/><column index="20" value="60"/><column index="21" value="85"/><column index="22" value="85"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT 
+FG.MaterialDescription,
+PO.Materialdescription,
+SUM(FGQuality)/1000.0 AS GR,
+SUM(RMQuality)/1000.0 AS GI,
+SUM(F3Quantity)/1000.0 AS CO_F3,
+SUM(StartupQuantity)/1000.0 AS CO_Startup,
+SUM(BranQuantity)/1000.0 AS CO_WheatBran,
+SUM(WaterQuantity)/1000.0 AS CO_Water,
+(F3Quantity/1000.0) + (StartupQuantity/1000.0) + (BranQuantity/1000.0)  AS CO_PRODUCT,
+Round(((RMQuality/1000.0)-(-FGQuality/1000.0)),2)AS Diff,
+Round(((RMQuality/1000.0)-(-FGQuality/1000.0))/(RMQuality/1000.0),4)*100 AS Diff1,
+(RMQuality+WaterQuantity)/1000.0 AS &quot;RM+WATER&quot;,
+ROUND((((FGQuality + F3Quantity + StartupQuantity + BranQuantity)/1000.0) / ((RMQuality+WaterQuantity)/1000.0)),4)*100 AS  Yield
+FROM FG,RM,F3,Startup,Water,Wheat_Bran,PO
+WHERE FG.MaterialDescription = RM.RowLabels
+AND RM.RowLabels = F3.RowLabels
+AND F3.RowLabels = Startup.RowLabels
+AND Startup.RowLabels = Water.RowLabels
+AND Water.RowLabels = Wheat_Bran.RowLabels
+AND Wheat_Bran.RowLabels = PO.POOrder
+GROUP BY RM.RowLabels ;
+
+
+
+
+
+</sql><sql name="DROP">Drop TABLE quality;</sql><sql name="SQL 3">--การใช้left join โดยอิงจาก PO ทุก PO โดยไม่สนว่ามีค่าหรือไม่มีค่า 
+SELECT 
+FG.RowLabels,
+PO.Materialdescription,
+coalesce(SUM(GIQuantity)/1000.0,0) AS GI,
+SUM(WaterQuantity)/1000.0 AS CO_Water,
+SUM(WheatinputB1) AS &quot;B1&quot;,
+coalesce(SUM(WheatinputB1),0) AS B11,
+SUM(FGQuantity)/1000.0 AS GR,
+SUM(F3Quantity)/1000.0 AS CO_F3,
+SUM(StartupQuantity)/1000.0 AS CO_Startup,
+SUM(BranQuantity)/1000.0 AS CO_Bran,
+MoistureRM,
+MoistureF1,
+MoistureB1
+FROM FG
+left JOIN GI 
+on FG.RowLabels = GI.RowLabels
+left JOIN F3
+on GI.RowLabels = F3.RowLabels
+left JOIN Water
+on GI.RowLabels = Water.RowLabels
+left JOIN B1
+on GI.RowLabels = B1.ProcessOrder
+left JOIN Bran
+on F3.RowLabels = Bran.RowLabels
+left JOIN PO
+on FG.RowLabels = PO.POOrder
+left JOIN Startup
+on FG.RowLabels = Startup.RowLabels
+GROUP BY GI.RowLabels ;
+
+</sql><sql name="Create Table">--การใช้left join โดยอิงจาก PO ทุก PO โดยไม่สนว่ามีค่าหรือไม่มีค่า
+CREATE TABLE Data_analyst1
+AS
+SELECT 
+FG.MaterialDescription,
+PO.Materialdescription,
+SUM(RMQuality)/1000.0 AS GI,
+SUM(WaterQuantity)/1000.0 AS CO_Water,
+SUM(WheatinputB1) AS &quot;B1&quot;,
+SUM(FGQuality)/1000.0 AS GR,
+SUM(F3Quantity)/1000.0 AS CO_F3,
+SUM(StartupQuantity)/1000.0 AS CO_Startup,
+SUM(BranQuantity)/1000.0 AS CO_Bran,
+MoistureRM,
+MoistureF1,
+MoistureB1
+FROM FG
+left JOIN RM 
+on FG.MaterialDescription = RM.RowLabels
+left JOIN F3
+on RM.RowLabels = F3.RowLabels
+left JOIN Water
+on RM.RowLabels = Water.RowLabels
+left JOIN B1
+on RM.RowLabels = B1.ProcessOrder
+left JOIN Wheat_Bran
+on F3.RowLabels = Wheat_Bran.RowLabels
+left JOIN PO
+on FG.MaterialDescription = PO.POOrder
+left JOIN Startup
+on FG.MaterialDescription = Startup.RowLabels
+GROUP BY RM.RowLabels ;
+</sql><sql name="Masterdata">--การใช้left join โดยอิงจาก PO ทุก PO โดยไม่สนว่ามีค่าหรือไม่มีค่า
+SELECT 
+FG.RowLabels ,
+PO.Materialdescription ,
+SUM(GIQuantity)/1000.0 AS GI ,
+SUM(WaterQuantity)/1000.0 AS CO_Water ,
+SUM(WheatinputB1) AS &quot;B1&quot; ,
+SUM(FGQuantity)/1000.0 AS GR ,
+SUM(F3Quantity)/1000.0 AS CO_F3 ,
+SUM(StartupQuantity)/1000.0 AS CO_Startup ,
+SUM(BranQuantity)/1000.0 AS CO_Bran ,
+MoistureRM,
+MoistureF1,
+MoistureB1
+FROM FG
+left JOIN GI 
+on FG.RowLabels = GI.RowLabels
+left JOIN F3
+on FG.RowLabels = F3.RowLabels
+left JOIN Water
+on FG.RowLabels = Water.RowLabels
+left JOIN B1
+on FG.RowLabels = B1.ProcessOrder
+left JOIN Bran
+on F3.RowLabels = Bran.RowLabels
+left JOIN PO
+on FG.RowLabels = PO.POOrder
+left JOIN Startup
+on FG.RowLabels = Startup.RowLabels
+GROUP BY GI.RowLabels ;
+
+</sql><sql name="Crearte Reprocess">--Create Reprocess TABLE
+CREATE Table Reprocess
+AS
+SELECT 
+po,
+strftime('%Y-%m',Date) AS MonthID,
+ROUND(SUM((Quantity)/1000.0),2) AS &quot;Quantity(MT)&quot;,
+note
+From FinalTransaction
+WHERE Note = &quot;REPROCESS&quot;
+AND  MonthID like '2023%'
+Group by PO
+Order by MonthID;</sql><sql name="SQL 7">--การใช้left join โดยอิงจาก PO ทุก PO โดยไม่สนว่ามีค่าหรือไม่มีค่า
+SELECT 
+FG.RowLabels ,
+PO.Materialdescription ,
+SUM(GIQuantity)/1000.0 AS GI ,
+SUM(WaterQuantity)/1000.0 AS CO_Water ,
+SUM(WheatinputB1) AS &quot;B1&quot; ,
+SUM(FGQuantity)/1000.0 AS GR ,
+SUM(F3Quantity)/1000.0 AS CO_F3 ,
+SUM(StartupQuantity)/1000.0 AS CO_Startup ,
+SUM(BranQuantity)/1000.0 AS CO_Bran ,
+MoistureRM,
+MoistureF1,
+MoistureB1
+FROM FG
+left JOIN GI 
+on FG.RowLabels = GI.RowLabels
+left JOIN F3
+on GI.RowLabels = F3.RowLabels
+left JOIN Water
+on GI.RowLabels = Water.RowLabels
+left JOIN B1
+on GI.RowLabels = B1.ProcessOrder
+left JOIN Bran
+on F3.RowLabels = Bran.RowLabels
+left JOIN PO
+on FG.RowLabels = PO.POOrder
+left JOIN Startup
+on FG.RowLabels = Startup.RowLabels
+GROUP BY FG.RowLabels ;
+
+</sql><sql name="Q1">--IN 2023 USE RM (Wheat)
+
+/*CREATE View IN_2023_USE_RM
+AS*/
+
+SELECT 
+M.Materialdescription,
+ROUND(SUM(F.Quantity)/1000.0,2) AS &quot;QUANTITY_(TON)&quot;,
+strftime('%Y-%m',F.Date) AS MonthID
+From FinalTransaction as F , Material as M
+WHERE F.MaterialNO = M.Material
+AND F.Materialdescription like 'RM%'
+AND MonthID Like '2023%'
+Group by F.Materialdescription,MonthID
+Order by F.Materialdescription,MonthID;</sql><sql name="Q2">--IN 2023 USE Water
+
+CREATE View IN_2023_USE_Water
+AS
+
+SELECT 
+strftime('%Y-%m',StartDate_Cleaning) AS MonthID,
+SUM(Water) AS &quot;Water(MT)&quot;
+From MASTER
+WHERE MonthID like '2023%'
+Group by MonthID
+Order by MonthID;</sql><sql name="Q3">--IN 2023 USE Reprocess
+
+CREATE VIEW IN_2023_USE_Reprocess
+AS
+
+SELECT 
+strftime('%Y-%m',Date) AS MonthID,
+ROUND(SUM((Quantity)/1000.0),2) AS &quot;Quantity(MT)&quot;,
+note
+From FinalTransaction
+WHERE Note = &quot;REPROCESS&quot;
+AND  MonthID like '2023%'
+Group by MonthID
+Order by MonthID;</sql><sql name="Q4-1">--IN 2023 USE Downgrade
+
+CREATE VIEW IN_2023_USE_Downgrade
+AS
+
+SELECT 
+strftime('%Y-%m',PD.start_date) AS MonthID,
+Round((Sum(CF.SumofQuatity*-1))/1000.0,3) AS &quot;Quantity(MT)&quot;
+From ProcessOrder as PD , CleaningFlour as CF
+WHERE PD.ProcessOrder = CF.RowLabels
+AND MonthID like '2023%'
+GROUP BY MonthID
+ORDER by MonthID;</sql><sql name="Q4-2">--IN 2023 USE Downgrade
+
+CREATE Table IN_2023_USE_Downgrade
+AS
+
+SELECT 
+strftime('%Y-%m',Date) AS MonthID,
+ROUND(SUM((Quantity)/1000.0),2) AS &quot;Quantity(MT)&quot;
+From FinalTransaction
+WHERE Materialdescription like 'Clean%'
+AND  MonthID like '2023%'
+Group by MonthID
+Order by MonthID;</sql><sql name="Q5">--IN 2023 USE ChangeOvertime
+
+CREATE VIEW IN_2023_USE_ChangeOvertime
+AS
+
+SELECT 
+count(ProcessOrder),
+strftime('%Y-%m',start_date)AS MonthID
+FROM ProcessOrder
+WHERE MonthID like '2023%'
+GROUP by MonthID;
+
+
+</sql><sql name="Q6">--IN 2023 USE FG
+
+CREATE VIEW IN_2023_FG
+AS
+
+SELECT 
+	M.Materialdescription,
+	(FG.FGQuatity/1000.0)*-1 AS QUANTITY,
+	strftime('%Y',P.start_date) AS YEAR
+FROM ProcessOrder as P,Material AS M,FG
+WHERE M.Material = P.Material_ID
+AND P.ProcessOrder = FG.RowLabels
+AND YEAR = '2023'
+Group by Material
+Order by Materialdescription;</sql><sql name="Q7">--IN 2023 USE B1
+
+CREATE VIEW IN_2023_USE_B1
+AS
+
+SELECT 
+ Mat.Materialdescription,
+ Tempwheat,
+ strftime('%Y',P.start_date) AS MonthID
+ FROM MASTER AS M , ProcessOrder AS P , Material As Mat
+ WHERE M.ProcessOrder = P.ProcessOrder
+ AND P.Material_ID = Mat.Material
+ AND MonthID Like '2023%' 
+ AND Mat.Material != '3100000090' --ไม่เอา &quot;WFC
+ Group BY Mat.Materialdescription;
+ </sql><sql name="Q8">--IN 2023 USE DOWNTIME
+
+CREATE VIEW IN_2023_USE_DOWNTIME
+AS
+
+SELECT 
+  Sum(Total_Time) AS DOWNTIME_MIN,
+  strftime ('%Y-%m',Date) AS MonthID
+FROM DOWNTIME
+WHERE MonthID Like '2023%'
+AND DowntimeNo != '11'
+Group by MonthID;
+ </sql><sql name="Q9">--IN 2023 USE Runtime
+
+CREATE VIEW IN_2023_USE_Runtime
+AS
+
+SELECT 
+	SUM(Total_HR) AS Total_HR ,
+	Round(SUM(Total_HR*60),0) AS Total_MIN,
+	Round(SUM((Total_HR*60)/(60*24.0)),2) AS Total_DAY,
+	strftime('%Y-%m',StartDate_Milling) AS MonthID
+FROM MASTER 
+WHERE MonthID Like '2023%'
+Group by MonthID;
+ </sql><sql name="Q10">--IN 2023 USE WorkingDAY
+
+CREATE VIEW IN_2023_USE_WorkingDAY
+AS
+
+SELECT
+Count(DISTINCT  date),
+strftime('%Y-%m',Date) AS MonthID
+FROM FinalTransaction
+Where MonthID Like '2023%'
+AND Movementtype In ('101','102')
+Group by MonthID;</sql><sql name="Q11">--IN 2023 USE Workig(HR/Day)
+
+CREATE VIEW IN_2023_USE_Workig_HR_Day
+AS
+
+SELECT 
+	R.Total_MIN,
+	R.Total_HR,
+	R.Total_DAY,
+	W.WorkingDay,
+	Round((R.Total_HR/W.WorkingDay),2) AS Working_HR_DAY
+FROM Runtime AS R , WorkingDay AS W 
+WHERE R.MonthID = W.MonthID
+Group by R.MonthID;
+ </sql><sql name="Q12">--IN 2023 USE DOWNTIME GROUP
+
+/*CREATE VIEW DOWNTIME_GROUP
+AS */
+
+SELECT 
+  GT.DowntimeNo,
+  GT.DowntimeDescription,
+  Sum(Total_Time) AS DOWNTIME_MIN,
+  strftime ('%Y',Date) AS Year
+FROM DOWNTIME AS DT , GroupDT AS GT
+WHERE DT.DowntimeNo = GT.DowntimeNo
+AND Year Like '2023%'
+Group by GT.DowntimeNo
+Order By Year;
+ </sql><sql name="12.05.24.sql">--IN 2023 USE TRADE
+
+CREATE VIEW IN_2023_USE_TRADE
+AS
+
+SELECT 
+	T.Trade,
+	SUM(FG.FGQuatity/1000.0)*-1 AS QUANTITY,
+	strftime('%Y-%m',P.start_date) AS MonthID
+FROM ProcessOrder as P,Material AS M,FG,Trade As T
+WHERE M.Material = P.Material_ID
+AND P.ProcessOrder = FG.RowLabels
+AND T.Material = P.Material_ID
+AND MonthID like '2023%'
+Group by T.Trade,MonthID
+Order by MonthID;</sql><sql name="Q14">--IN 2023 USE yield 
+
+/* CREATE VIEW IN_2023_USE_yield 
+AS */
+
+SELECT 
+	MAT.Materialdescription,
+	coalesce (SUM(FG.FGQuatity),0) AS FG,
+	coalesce (SUM(f3.F3Quatity),0) AS FlourCO,
+	coalesce (SUM(CF.SumofQuatity),0) AS CleaningFlour,
+	coalesce (SUM(B.BranQuatity),0) AS Bran,
+	coalesce (SUM(M.Tempwheat),0) AS Tempwheat,
+    Round((((coalesce (SUM(FG.FGQuatity),0))+(coalesce (SUM(f3.F3Quatity),0))+(coalesce (SUM(CF.SumofQuatity),0))+(coalesce (SUM(B.BranQuatity),0)))*-1)/SUM(M.Tempwheat*1000.0)*100.0,2) AS Yield
+FROM FG
+LEFT join ProcessOrder as PO
+on PO.ProcessOrder = FG.RowLabels
+LEFT join F3
+on PO.ProcessOrder = F3.RowLabels
+LEFT join CleaningFlour as CF
+on PO.ProcessOrder = CF.RowLabels
+LEFT join Bran AS B
+on PO.ProcessOrder = B.RowLabels
+LEFT join MASTER AS M
+on PO.ProcessOrder = M.ProcessOrder
+LEFT join Material AS MAT
+on PO.Material_ID = MAT.Material
+WHERE Tempwheat &gt; 0 
+Group By MAT.Material;
+
+</sql><sql name="Q15">--IN 2023 USE LOSS IN PROCESS
+
+/* CREATE VIEW IN_2023_USE_LOSS_IN_PROCESS
+AS */
+
+SELECT 
+	PO.ProcessOrder,
+	MAT.Materialdescription,
+	coalesce (SUM(FG.FGQuatity)/1000.0,0) AS FG,
+	coalesce (SUM(f3.F3Quatity)/1000.0,0) AS FlourCO,
+	coalesce (SUM(CF.SumofQuatity)/1000.0,0) AS CleaningFlour,
+	coalesce (SUM(B.BranQuatity)/1000.0,0) AS Bran,
+	coalesce (SUM(RE.Quantity),0) AS Reprocess,
+	coalesce (SUM(M.Tempwheat),0) AS Tempwheat,
+    Round((((coalesce (SUM(FG.FGQuatity),0))+(coalesce (SUM(f3.F3Quatity),0))+(coalesce (SUM(CF.SumofQuatity),0))+(coalesce (SUM(B.BranQuatity),0)))/-1000.0)-(coalesce (SUM(RE.Quantity),0))-SUM(M.Tempwheat),2) AS LOSS_IN_PROCESS
+FROM FG
+LEFT join ProcessOrder as PO
+on PO.ProcessOrder = FG.RowLabels
+LEFT join F3
+on PO.ProcessOrder = F3.RowLabels
+LEFT join CleaningFlour as CF
+on PO.ProcessOrder = CF.RowLabels
+LEFT join Bran AS B
+on PO.ProcessOrder = B.RowLabels
+LEFT join MASTER AS M
+on PO.ProcessOrder = M.ProcessOrder
+LEFT join Material AS MAT
+on PO.Material_ID = MAT.Material
+Left join Reprocess AS RE
+on PO.ProcessOrder = RE.PO
+WHERE Tempwheat &gt; 0 
+Group By PO.ProcessOrder;
+
+</sql><sql name="Q16">--IN 2023 USE OEE
+
+/*CREATE VIEW IN_2023_USE_OEE
+AS */
+
+--1.สร้างTable B1/Downgrade/FG Join กับ Downtime โดยไม่เอา Group 11 โดยใช้ select ซ้อน select
+--2.หาค่า A P Q OEE
+
+--Step1 Create Table Tempwheat
+
+ /* CREATE TABLE Tempwheat
+AS
+SELECT 
+ SUM(Tempwheat) AS Tempwheat,
+ strftime('%Y-%m',P.start_date) AS MonthID
+ FROM MASTER AS M , ProcessOrder AS P , Material As Mat
+ WHERE M.ProcessOrder = P.ProcessOrder
+ AND P.Material_ID = Mat.Material
+ AND MonthID Like '2023%'
+ AND Mat.Material != '3100000090'
+ Group BY MonthID;   */
+ -------------------------------------------------------------
+ --Step2 CREATE table Downgrade
+  
+/* Create table Downgrade
+ AS
+ SELECT 
+strftime('%Y-%m',PD.start_date) AS MonthID,
+Round((Sum(CF.SumofQuatity*-1))/1000.0,3) AS &quot;DownGrade_Quantity&quot;
+From ProcessOrder as PD , CleaningFlour as CF
+WHERE PD.ProcessOrder = CF.RowLabels
+AND MonthID like '2023%'
+GROUP BY MonthID
+ORDER by MonthID;  */
+  -------------------------------------------------------------
+ --Step3 CREATE table FG
+ 
+ /*  CREATE TABLE FG_Recive
+ AS
+ SELECT 
+	SUM(FG.FGQuatity/1000.0)*-1 AS QUANTITY,
+	strftime('%Y-%m',P.start_date) AS MonthID
+FROM ProcessOrder as P,Material AS M,FG
+WHERE M.Material = P.Material_ID
+AND P.ProcessOrder = FG.RowLabels
+AND MonthID like '2023%'
+Group by MonthID
+Order by MonthID; */
+ 
+  -------------------------------------------------------------
+ SELECT 
+RT.MonthID,
+RT.Total_HR AS RUNTIME_HR,
+ROUND((DT.DownTime_MIN/60.00),2) as DownTime_HR ,
+ROUND((RT.Total_HR)*100.0/((DT.DownTime_MIN/60.00)+RT.Total_HR),2) AS A,
+ROUND(TW.Tempwheat,2) as Tempwheat,
+ROUND((TW.Tempwheat/RT.Total_HR)*100.0/(11.0),2) as P,
+DG.DownGrade_Quantity AS Downgrade,
+FR.Quantity AS FG_Recive,
+ROUND(((FR.Quantity-DG.DownGrade_Quantity)/(FR.Quantity))*100,2) AS Q,
+ROUND(((RT.Total_HR)*100.0/((DT.DownTime_MIN/60.00)+RT.Total_HR))*((TW.Tempwheat/RT.Total_HR)*100.0/(11.0))*(((FR.Quantity-DG.DownGrade_Quantity)/(FR.Quantity))*100)/10000.0,2) AS OEE
+FROM
+
+( SELECT 
+  Sum(Total_Time) AS DOWNTIME_MIN,
+  strftime ('%Y-%m',Date) AS MonthID
+FROM DOWNTIME AS DT , GroupDT AS GT
+WHERE DT.DowntimeNo = GT.DowntimeNo
+AND MonthID Like '2023%'
+AND DT.DowntimeNo != '11' --ไม่เอา Downtimegroup นี้
+Group by MonthID
+Order By MonthID )  AS DT , Runtime AS RT , Tempwheat AS TW ,Downgrade As DG , FG_Recive AS FR
+WHERE DT.MonthID = RT.MonthID
+AND DT.MonthID = TW.MonthID
+AND DT.MonthID = DG.MonthID
+AND DT.MonthID = FR.MonthID;   
+ 
+ 
+
+</sql><sql name="D.DOWMTIME ">--IN 2023 USE DOWNTIME GROUP
+
+ CREATE VIEW D_DOWNTIME_GROUP
+AS  
+
+SELECT 
+  GT.DowntimeNo,
+  GT.DowntimeDescription,
+  Sum(Total_Time) AS DOWNTIME_MIN,
+  strftime ('%Y%m',Date) AS MonthID
+FROM DOWNTIME AS DT , GroupDT AS GT
+WHERE DT.DowntimeNo = GT.DowntimeNo
+Group by GT.DowntimeDescription,MonthID
+Order By MonthID;</sql><sql name="D.yield">--IN 2023 USE yield 
+
+ /* CREATE VIEW D_IN_2023_USE_yield 
+AS */
+
+SELECT 
+    strftime ('%Y-%m',PO.start_date) AS MonthID,
+	MAT.Materialdescription,
+	coalesce (SUM(FG.FGQuatity)/1000.0,0) AS FG,
+	coalesce (SUM(f3.F3Quatity)/1000.0,0) AS FlourCO,
+	coalesce (SUM(CF.SumofQuatity)/1000.0,0) AS CleaningFlour,
+	coalesce (SUM(B.BranQuatity)/1000.0,0) AS Bran,
+	coalesce (SUM(M.Tempwheat),0) AS Tempwheat,
+    Round((((coalesce (SUM(FG.FGQuatity),0))+(coalesce (SUM(f3.F3Quatity),0))+(coalesce (SUM(CF.SumofQuatity),0))+(coalesce (SUM(B.BranQuatity),0)))*-1)/SUM(M.Tempwheat*1000.0)*100.0,2) AS Yield
+FROM FG
+LEFT join ProcessOrder as PO
+on PO.ProcessOrder = FG.RowLabels
+LEFT join F3
+on PO.ProcessOrder = F3.RowLabels
+LEFT join CleaningFlour as CF
+on PO.ProcessOrder = CF.RowLabels
+LEFT join Bran AS B
+on PO.ProcessOrder = B.RowLabels
+LEFT join MASTER AS M
+on PO.ProcessOrder = M.ProcessOrder
+LEFT join Material AS MAT
+on PO.Material_ID = MAT.Material
+WHERE Tempwheat &gt; 0 
+Group By MAT.Material,MonthID;
+
+</sql><sql name="D-quality">
+CREATE View D_quality
+AS
+
+SELECT 
+strftime ('%Y-%m',p.start_date) AS MonthID,
+p.Processorder,
+m.Materialdescription,
+SUM(MC_MB),
+SUM(Ash_NIR),
+SUM(Protein_NIR),
+SUM(WG),
+SUM(WA)
+FROM quality AS Q , Processorder AS P , Material  AS M
+WHERE q.Processorder = p.Processorder
+AND p.Material_ID = m.Material
+GROUP BY P.Processorder ;	</sql><sql name="SQL 29">CREATE VIEW Protien
+AS
+
+SELECT 
+M.Materialdescription,
+P.Country,
+P.Protein,
+P.Price,
+ROUND(SUM(F.Quantity)/1000.0,2) AS &quot;QUANTITY_(TON)&quot;,
+strftime('%Y-%m',F.Date) AS MonthID
+From FinalTransaction as F , Material as M , Protein As P
+WHERE F.MaterialNO = M.Material
+AND F.MaterialNO = P.Material
+AND F.Materialdescription like 'RM%'
+AND MonthID Like '2023%'
+Group by F.Materialdescription,MonthID
+Order by F.Materialdescription,MonthID;</sql><current_tab id="7"/></tab_sql></sqlb_project>
