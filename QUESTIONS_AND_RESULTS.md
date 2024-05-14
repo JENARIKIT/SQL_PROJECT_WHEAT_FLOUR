@@ -1,22 +1,18 @@
-# PRODUCTION OF WHEAT FLOUR
+# 🌾 PRODUCTION OF WHEAT FLOUR🌾 
 
-**DASHBOARD**: https://lookerstudio.google.com/s/v3OtnouAGfM <br />
-
-#ข้อมูลที่แสดงผลออกมาเป็นเพียงแค่การสมมติขึ้น
-
-# 🌾 รายงานนี้เป็น การวิเคราะห์ SQL เกี่ยวกับการผลิตแป้งสาลี เช่น ตัวเลขการใช้วัตถุดิบ  ตัวเลขยอดสินค้าที่ผลิตได้ เวลาที่ใช้ในการทำงาน เวลาที่สูญเสียจากกระบวนการผลิต ยอด OEE , Performance , Quality , Avalidility ในปั 2023 🌾
+**📊 DASHBOARD**: https://lookerstudio.google.com/s/v3OtnouAGfM 
 
 
--- 🐻:List the total number of reported crimes between 2018 and 2022?
+## รายงานนี้เป็น การวิเคราะห์ SQL เกี่ยวกับการผลิตแป้งสาลี เช่น ตัวเลขการใช้วัตถุดิบ  ตัวเลขยอดสินค้าที่ผลิตได้ เวลาที่ใช้ในการทำงาน เวลาที่สูญเสียจากกระบวนการผลิต ยอด OEE , Performance , Quality , Avalidility ในปั 2023
+❗❗ ข้อมูลที่แสดงผลออกมาเป็นเพียงแค่การสมมติขึ้น ❗❗
 
-````sql
-````
---❓ Q1.IN 2023 USE RM (Wheat)
+
+🟠 **Q1.** List the total amount of Raw Material used in 2023 
 ````sql
 SELECT 
-M.Materialdescription,
-ROUND(SUM(F.Quantity)/1000.0,2) AS &quot;QUANTITY_(TON)&quot;,
-strftime('%Y-%m',F.Date) AS MonthID
+	M.Materialdescription,
+	ROUND(SUM(F.Quantity)/1000.0,2) AS &quot;QUANTITY_(TON)&quot;,
+	strftime('%Y-%m',F.Date) AS MonthID
 From FinalTransaction as F , Material as M
 WHERE F.MaterialNO = M.Material
 AND F.Materialdescription like 'RM%'
@@ -25,23 +21,23 @@ Group by F.Materialdescription,MonthID
 Order by F.Materialdescription,MonthID; 
 ````
 
---❓ Q2.IN 2023 USE Water
+🟠 **Q2.** List the total amount of Water used in 2023 
 ````sql
 SELECT 
-strftime('%Y-%m',StartDate_Cleaning) AS MonthID,
-SUM(Water) AS &quot;Water(MT)&quot;
+	strftime('%Y-%m',StartDate_Cleaning) AS MonthID,
+	SUM(Water) AS &quot;Water(MT)&quot;
 From MASTER
 WHERE MonthID like '2023%'
 Group by MonthID
 Order by MonthID;</sql><sql name="Q3">--IN 2023 USE Reprocess 
 ````
 
---❓ Q3.IN 2023 USE Reprocess
+🟠 **Q3.** List the total amount of Reprocess-Product used in Process 2023
 ````sql
 SELECT 
-strftime('%Y-%m',Date) AS MonthID,
-ROUND(SUM((Quantity)/1000.0),2) AS &quot;Quantity(MT)&quot;,
-note
+	strftime('%Y-%m',Date) AS MonthID,
+	ROUND(SUM((Quantity)/1000.0),2) AS &quot;Quantity(MT)&quot;,
+	note
 From FinalTransaction
 WHERE Note = &quot;REPROCESS&quot;
 AND  MonthID like '2023%'
@@ -49,7 +45,7 @@ Group by MonthID
 Order by MonthID;
 ````
 
---❓ Q4.IN 2023 USE Downgrade
+🟠 **Q4.** List the total amount of Downgrade produced in the 2023 process.
 ````sql
 SELECT 
 strftime('%Y-%m',PD.start_date) AS MonthID,
@@ -60,7 +56,7 @@ AND MonthID like '2023%'
 GROUP BY MonthID
 ORDER by MonthID;
 ````
---❓ Q5.IN 2023 USE ChangeOvertime
+🟠 **Q5.** IN 2023 USE ChangeOvertime
 ````sql
 SELECT 
 count(ProcessOrder),
@@ -70,7 +66,7 @@ WHERE MonthID like '2023%'
 GROUP by MonthID;
 ````
 
---❓ Q6.IN 2023 USE FG
+🟠 **Q6.** List the total amount of Finished goods produced in the 2023 process.
 ````sql
 SELECT 
 	M.Materialdescription,
@@ -84,12 +80,12 @@ Group by Material
 Order by Materialdescription;
 ````
 
---❓ Q7.IN 2023 USE B1
+🟠 **Q7.** List the total amount of Temperd Wheat produced in the 2023 process.
 ````sql
 SELECT 
- Mat.Materialdescription,
- Tempwheat,
- strftime('%Y',P.start_date) AS MonthID
+ 	Mat.Materialdescription,
+	Tempwheat,
+ 	strftime('%Y',P.start_date) AS MonthID
  FROM MASTER AS M , ProcessOrder AS P , Material As Mat
  WHERE M.ProcessOrder = P.ProcessOrder
  AND P.Material_ID = Mat.Material
@@ -99,7 +95,7 @@ SELECT
  Group BY Mat.Materialdescription;
 ````
 
---❓ Q8.IN 2023 USE DOWNTIME
+🟠 **Q8.** List the total amount of Downtime in Production process of 2023.
 ````sql
 SELECT 
   Sum(Total_Time) AS DOWNTIME_MIN,
@@ -111,7 +107,7 @@ Group by MonthID;
 ````
 
 
---❓ Q9.IN 2023 USE Runtime
+🟠 **Q9.** List the total amount of Runtime used in Process 2023
 ````sql
 SELECT 
 	SUM(Total_HR) AS Total_HR ,
@@ -123,7 +119,7 @@ WHERE MonthID Like '2023%'
 Group by MonthID;
 ````
 
---❓ Q10.IN 2023 USE WorkingDAY
+🟠 **Q10.** Total number of working days in 2023
 ````sql
 SELECT
 Count(DISTINCT  date),
@@ -134,7 +130,7 @@ AND Movementtype In ('101','102')
 Group by MonthID;
 ````
 
---❓ Q11.IN 2023 USE Workig(HR/Day)
+🟠 **Q11.** Total number of working hours per day (HR/Day) in 2023
 ````sql
 SELECT 
 	R.Total_MIN,
@@ -147,7 +143,7 @@ WHERE R.MonthID = W.MonthID
 Group by R.MonthID;
 ````
 
---❓ Q12.IN 2023 USE DOWNTIME GROUP
+🟠 **Q12.** Total production downtime in 2023, by group
 ````sql
 SELECT 
   	GT.DowntimeNo,
@@ -161,7 +157,7 @@ Group by GT.DowntimeNo
 Order By Year;
 ````
 
---❓ Q13.IN 2023 USE TRADE
+🟠 **Q13.** Total number of product transactions in 2023, by transaction type
 ````sql
 SELECT 
 	T.Trade,
