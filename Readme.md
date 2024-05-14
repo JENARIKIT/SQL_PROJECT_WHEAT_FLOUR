@@ -289,26 +289,25 @@ Order by MonthID; */
  SELECT 
 RT.MonthID,
 RT.Total_HR AS RUNTIME_HR,
-ROUND((DT.DownTime_MIN/60.00),2) as DownTime_HR ,
+ROUND((DT.DownTime_MIN/60.00),2) AS DownTime_HR ,
 ROUND((RT.Total_HR)*100.0/((DT.DownTime_MIN/60.00)+RT.Total_HR),2) AS A,
-ROUND(TW.Tempwheat,2) as Tempwheat,
-ROUND((TW.Tempwheat/RT.Total_HR)*100.0/(11.0),2) as P,
+ROUND(TW.Tempwheat,2) AS Tempwheat,
+ROUND((TW.Tempwheat/RT.Total_HR)*100.0/(11.0),2) AS P,
 DG.DownGrade_Quantity AS Downgrade,
 FR.Quantity AS FG_Recive,
 ROUND(((FR.Quantity-DG.DownGrade_Quantity)/(FR.Quantity))*100,2) AS Q,
 ROUND(((RT.Total_HR)*100.0/((DT.DownTime_MIN/60.00)+RT.Total_HR))*((TW.Tempwheat/RT.Total_HR)*100.0/(11.0))*(((FR.Quantity-DG.DownGrade_Quantity)/(FR.Quantity))*100)/10000.0,2) AS OEE
 FROM
 
-( SELECT 
+(	 SELECT 
   Sum(Total_Time) AS DOWNTIME_MIN,
   strftime ('%Y-%m',Date) AS MonthID
 FROM DOWNTIME AS DT , GroupDT AS GT
 WHERE DT.DowntimeNo = GT.DowntimeNo
 AND MonthID Like '2023%'
-
 AND DT.DowntimeNo != '11' --ไม่เอา Downtimegroup นี้
 Group by MonthID
-Order By MonthID )  AS DT , Runtime AS RT , Tempwheat AS TW ,Downgrade As DG , FG_Recive AS FR
+Order By MonthID 		) AS  DT  ,  Runtime AS RT  ,  Tempwheat AS TW  , Downgrade As DG ,  FG_Recive AS FR
 WHERE DT.MonthID = RT.MonthID
 AND DT.MonthID = TW.MonthID
 AND DT.MonthID = DG.MonthID
