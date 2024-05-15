@@ -300,17 +300,17 @@ Group by R.MonthID;
 ````
 Total_MI  | Total_HR | Total_DAY  |  WorkingDay | Working_HR_DAY | 
 ----------|----------|------------|-------------|----------------|
-24122.0	  | 402.04		16.75		25	16.08
-28344.0	  | 472.4		19.68		28	16.87
-25159.0	  | 419.31		17.47		22	19.06
-34558.0	  |575.96		24.0		29	19.86
-28869.0	  |481.15		20.05		28	17.18
-32554.0	  |542.57		22.61		30	18.09
-47860.0	  |797.66		33.24		31	25.73
-35246.0	  |587.43		24.48		30	19.58
-37403.0	  |623.39		25.97		31	20.11
-34833.0	  |580.55		24.19		29	20.02
-31833.0	  |530.55		22.11		25	21.22
+24122.0	  | 402.04   |   16.75    | 	25    	|	16.08    |
+28344.0	  | 472.4    | 	 19.68    |	28    	|	16.87	 |
+25159.0	  | 419.31   | 	 17.47    |	22    	|	19.06    |
+34558.0	  | 575.96   | 	 24.0     |	29    	|	19.86    |    
+28869.0	  | 481.15   | 	 20.05    |	28    	|	17.18    |
+32554.0	  | 542.57   | 	 22.61    |	30    	|	18.09    |
+47860.0	  | 797.66   | 	 33.24    |	31    	|	25.73    |
+35246.0	  | 587.43   | 	 24.48    |	30    	|	19.58    |
+37403.0	  | 623.39   | 	 25.97    |	31    	|	20.11    |
+34833.0	  | 580.55   | 	 24.19    |	29    	|	20.02    |
+31833.0	  | 530.55   | 	 22.11    |	25    	|	21.22    |
 
 🟠 **Q12.** Total production downtime in 2023, by group
 ````sql
@@ -325,16 +325,19 @@ AND Year Like '2023%'
 Group by GT.DowntimeNo
 Order By Year;
 ````
-DowntimeNo DowntimeDescription DOWNTIME_MIN 	Year
-1	MECHANICAL LOSSES	263		2023
-2	 ELECTRICAL LOSSES 	99		2023
-3	 MECHANIC UTILITY 	158		2023
-4	 ELECTRICAL UTILITY 	156		2023
-5	 OTHER UTILITY 		909		2023
-6	 PRODUCTION 		10512		2023
-7	 CLEAR_LINE_PLAN 	200		2023
-8	 CLEAR_LINE_UNPLAN 	549		2023
-11	 OTHER 			11846		2023
+
+DowntimeNo |  DowntimeDescription |DOWNTIME_MIN |Year| 
+-----------|----------------------|-------------|----|
+1	   |  MECHANICAL LOSSES   |	263     |2023|
+2	   |  ELECTRICAL LOSSES   | 	99      |2023|
+3	   |  MECHANIC UTILITY    |	158     |2023|
+4	   |  ELECTRICAL UTILITY  | 	156     |2023|
+5	   |  OTHER UTILITY       | 	909     |2023|
+6	   |  PRODUCTION          |	10512   |2023|
+7	   |  CLEAR_LINE_PLAN     | 	200     |2023|
+8	   |  CLEAR_LINE_UNPLAN   | 	549     |2023|
+11	   |  OTHER 		  |	11846   |2023|
+
 
 🟠 **Q13.** Total number of product transactions in 2023, by transaction type
 ````sql
@@ -350,31 +353,35 @@ AND MonthID like '2023%'
 Group by T.Trade,MonthID
 Order by MonthID;
 ````
-TRADE			QUANTITY	MonthID
-DOMESTIC TRADE		882.049		2023-01
-INTERNATIONAL TRADE	2376.385	2023-01
-DOMESTIC TRADE		305.951		2023-02
-INTERNATIONAL TRADE	1962.699	2023-02
-DOMESTIC TRADE		946.146		2023-03
-INTERNATIONAL TRADE	2622.173	2023-03
-DOMESTIC TRADE		1106.547	2023-04
-INTERNATIONAL TRADE	2001.842	2023-04
-DOMESTIC TRADE		929.583		2023-05
-INTERNATIONAL TRADE	3404.82		2023-05
-DOMESTIC TRADE		773.814		2023-06
-INTERNATIONAL TRADE	2788.037	2023-06
-DOMESTIC TRADE		565.976		2023-07
-INTERNATIONAL TRADE	2969.353	2023-07
-DOMESTIC TRADE		982.001		2023-08
-INTERNATIONAL TRADE	3305.334	2023-08
-DOMESTIC TRADE		910.797		2023-09
-INTERNATIONAL TRADE	2921.9		2023-09
-DOMESTIC TRADE		579.165		2023-10
-INTERNATIONAL TRADE	2617.765	2023-10
-DOMESTIC TRADE		1343.225	2023-11
-INTERNATIONAL TRADE	2144.641	2023-11
-DOMESTIC TRADE		863.639		2023-12
-INTERNATIONAL TRADE	2093.337	2023-12
+
+TRADE	             |  QUANTITY	       |   MonthID   |
+---------------------|-------------------------|-------------|
+DOMESTIC TRADE	     |		882.049	       |   2023-01   |
+INTERNATIONAL TRADE  |		2376.385       |   2023-01   |
+DOMESTIC TRADE	     |		305.951	       |   2023-02   |
+INTERNATIONAL TRADE  |		1962.699       |   2023-02   |
+DOMESTIC TRADE	     |		946.146	       |   2023-03   |
+INTERNATIONAL TRADE  |		2622.173       |   2023-03   |
+DOMESTIC TRADE	     |		1106.547       |   2023-04   |
+INTERNATIONAL TRADE  |		2001.842       |   2023-04   |
+DOMESTIC TRADE	     |		929.583        |   2023-05   |
+INTERNATIONAL TRADE  |		3404.82	       |   2023-05   |
+DOMESTIC TRADE	     |		773.814	       |   2023-06   |
+INTERNATIONAL TRADE  |		2788.037       |   2023-06   |
+DOMESTIC TRADE	     |		565.976	       |   2023-07   |
+INTERNATIONAL TRADE  |		2969.353       |   2023-07   |
+DOMESTIC TRADE	     |		982.001	       |   2023-08   |
+INTERNATIONAL TRADE  |		3305.334       |   2023-08   |
+DOMESTIC TRADE	     |		910.797	       |   2023-09   |
+INTERNATIONAL TRADE  |		2921.9	       |   2023-09   |
+DOMESTIC TRADE	     |		579.165        |   2023-10   |
+INTERNATIONAL TRADE  |		2617.765       |   2023-10   |
+DOMESTIC TRADE	     |		1343.225       |   2023-11   |
+INTERNATIONAL TRADE  |		2144.641       |   2023-11   |
+DOMESTIC TRADE	     |		863.639	       |   2023-12   |
+INTERNATIONAL TRADE  |		2093.337       |   2023-12   |
+
+
 
 --❓ Q14.IN 2023 USE yield 
 ````sql
@@ -402,17 +409,20 @@ on PO.Material_ID = MAT.Material
 WHERE Tempwheat > 0 
 Group By MAT.Material;
 ````
-Flour-Bread1	7348.32501	670.35801	313.96101	2014.101	10661.471	97.05
-Flour-Noodle1	3773.281	966.235	149.355	1069.038	6118.562	97.37
-Flour-Feed1	23560.34407	84.913	494.015	5578.74704	30249.356	98.24
-Flour-Feed3	4910.015	0.034	127.869	1134.721	6255.855	98.67
-Flour-CrispyFlour1	186.65	10.854	12.782	50.065	265.085	98.21
-Flour-FriedChicken1	835.01501	192.354	38.464	244.425	1334.414	98.19
-Flour-CrispyFlour2	1151.492	260.581	52.909	318.461	1835.53	97.16
-Flour-Bread4	4850.44401	700.66	226.525	1243.7	7165.491	97.99
-Flour-Bread5	469.606	36.538	23.571	121.503	664.876	97.95
-Flour-Bread6	2488.83601	259.952	118.064	627.953	3563.765	98.06
-Flour-Noodle3	1076.342	93.942	22.994	263.607	1481.228	98.36
+
+TRADE	           |  QUANTITY      |DOWNTIME_MIN |   MonthID        |  TRADE      |   QUANTITY     |DOWNTIME_MIN | 
+-------------------|----------------|-------------|------------------|-------------|----------------|-------------|
+Flour-Bread1	   |	7348.32501  |	670.35801 |	313.96101    |	2014.101   |	10661.471   |	97.05     |
+Flour-Noodle1	   |	3773.281    |	966.235   |	149.355      |	1069.038   |	6118.562    |	97.37     |
+Flour-Feed1	   |	23560.34407 |	84.913    |	494.015	     |	5578.74704 |	30249.356   |	98.24     |
+Flour-Feed3	   |	4910.015    |	0.034     |	127.869	     |	1134.721   |	6255.855    |	98.67     |
+Flour-CrispyFlour1 |	186.65	    |	10.854	  |	12.782	     |	50.065     |	265.085	    |	98.21     |
+Flour-FriedChicken1|	835.01501   |	192.354	  |	38.464 	     |	244.425	   |	1334.414    |	98.19     |
+Flour-CrispyFlour2 |	1151.492    |	260.581	  |	52.909	     |	318.461	   |	1835.53	    |	97.16     |
+Flour-Bread4	   |	4850.44401  |	700.66    |	226.525	     |	1243.7	   |	7165.491    |	97.99     |
+Flour-Bread5	   |	469.606	    |	36.538	  |	23.571	     |	121.503	   |	664.876	    |	97.95     |
+Flour-Bread6	   |	2488.83601  |	259.952	  |	118.064	     |	627.953	   |	3563.765    |	98.06     |
+Flour-Noodle3	   |	1076.342    |	93.942	  |	22.994	     |	263.607	   |	1481.228    |	98.36     |
 
 --❓ Q15.IN 2023 USE LOSS IN PROCESS
 ````sql
