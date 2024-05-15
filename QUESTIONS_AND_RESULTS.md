@@ -21,8 +21,8 @@ Order by F.Materialdescription;
 ````
 **Results:**
 
-Materialdescription|QUANTITY_(TON)|
--------------------|--------------|
+Materialdescription  				|QUANTITY_(TON)|
+------------------------------------------------|--------------|
 AUSTRALIAN PRIME HARD 13.5% 			|   495.88|
 AUSTRALIAN PRIME HARD 14%  			|  7025.18|
 AUSTRALIAN PREMIUM WHITE 10.5% 			|  5327.19|
@@ -47,19 +47,23 @@ WHERE MonthID like '2023%'
 Group by MonthID
 Order by MonthID;</sql><sql name="Q3">--IN 2023 USE Reprocess 
 ````
-MonthID  Water(MT)
-2023-01	219.605
-2023-02	149.481
-2023-03	238.54
-2023-04	223.521
-2023-05	302.792
-2023-06	220.048
-2023-07	250.511
-2023-08	246.633
-2023-09	251.796
-2023-10	228.649
-2023-11	238.089
-2023-12	196.175
+
+**Results:**
+
+MonthID		    |Water(MT)	  |
+-------------------|--------------|
+2023-01	       	   |219.605	  |
+2023-02		   |149.481	  |
+2023-03		   |238.54	  |
+2023-04		   |223.521	  |
+2023-05		   |302.792	  |
+2023-06		   |220.048	  |
+2023-07		   |250.511	  |
+2023-08		   |246.633	  |
+2023-09		   |251.796	  |
+2023-10		   |228.649	  |
+2023-11	     	   |238.089	  |
+2023-12		   |196.175	  |
 
 🟠 **Q3.** List the total amount of Reprocess-Product used in Process 2023
 ````sql
@@ -73,19 +77,21 @@ AND  MonthID like '2023%'
 Group by MonthID
 Order by MonthID;
 ````
-MonthID Quantity(MT) Note
-2023-01	42.7	REPROCESS
-2023-02	15.1	REPROCESS
-2023-03	58.3	REPROCESS
-2023-04	49.24	REPROCESS
-2023-05	62.57	REPROCESS
-2023-06	31.64	REPROCESS
-2023-07	38.2	REPROCESS
-2023-08	44.2	REPROCESS
-2023-09	25.75	REPROCESS
-2023-10	52.06	REPROCESS
-2023-11	41.29	REPROCESS
-2023-12	62.58	REPROCESS
+
+MonthID		    |Quantity(MT)  | Note	  |
+--------------------|--------------|--------------|
+2023-01		    |42.7	   |REPROCESS	  |
+2023-02	            |15.1	   |REPROCESS	  |
+2023-03	   	    |58.3	   |REPROCESS 	  |
+2023-04		    |49.24	   |REPROCESS 	  |
+2023-05		    |62.57	   |REPROCESS	  |
+2023-06	            |31.64	   |REPROCESS	  |
+2023-07	            |38.2	   |REPROCESS	  |
+2023-08	            |44.2	   |REPROCESS	  |
+2023-09	            |25.75	   |REPROCESS	  |
+2023-10	            |52.06	   |REPROCESS	  |
+2023-11	            |41.29	   |REPROCESS	  |
+2023-12	            |62.58	   |REPROCESS	  |
 
 
 🟠 **Q4.** List the total amount of Downgrade produced in the 2023 process.
@@ -100,19 +106,20 @@ GROUP BY MonthID
 ORDER by MonthID;
 ````
 
-MonthID Quantity(MT)
-2023-01	123.889
-2023-02	69.438
-2023-03	119.448
-2023-04	90.809
-2023-05	135.278
-2023-06	111.32
-2023-07	121.751
-2023-08	127.154
-2023-09	112.486
-2023-10	108.439
-2023-11	126.537
-2023-12	64.744
+MonthID		    |Quantity(MT)  | 
+--------------------|--------------|
+2023-01 	    |123.889	   |
+2023-02		    |69.438	   |
+2023-03 	    |119.448	   |
+2023-04		    |90.809	   |
+2023-05		    |135.278	   |
+2023-06		    |111.32	   |
+2023-07		    |121.751	   |
+2023-08		    |127.154	   |
+2023-09		    |112.486	   |
+2023-10		    |108.439	   |
+2023-11		    |126.537	   |
+2023-12		    |64.744	   |
 
 
 🟠 **Q5.** IN 2023 USE ChangeOvertime
@@ -124,19 +131,20 @@ FROM ProcessOrder
 WHERE MonthID like '2023%'
 GROUP by MonthID;
 ````
-Change_Overtimes  MonthID
-54		2023-01
-37		2023-02
-61		2023-03
-52		2023-04
-73		2023-05
-59		2023-06
-63		2023-07
-76		2023-08
-71		2023-09
-59		2023-10
-66		2023-11
-50		2023-12
+Change_Overtimes    |  MonthID     | 
+--------------------|--------------|
+54		    |2023-01	   |
+37		    |2023-02	   |
+61		    |2023-03	   |
+52		    |2023-04	   |
+73		    |2023-05	   |
+59		    |2023-06	   |
+63		    |2023-07	   |
+76		    |2023-08	   |
+71		    |2023-09	   |
+59	 	    |2023-10	   |
+66		    |2023-11	   |
+50		    |2023-12	   |
 
 🟠 **Q6.** List the total amount of Finished goods produced in the 2023 process.
 ````sql
@@ -151,18 +159,20 @@ AND YEAR = '2023'
 Group by Material
 Order by Materialdescription;
 ````
-Materialdescription    QUANTITY YEAR
-Flour-Bread1		47.166	2023
-Flour-Bread4		59.832	2023
-Flour-Bread5		48.741	2023
-Flour-Bread6		58.575	2023
-Flour-CrispyFlour1	11.904	2023
-Flour-CrispyFlour2	30.566	2023
-Flour-Feed1		61.919	2023
-Flour-Feed3		71.876	2023
-Flour-FriedChicken1	46.706	2023
-Flour-Noodle1		56.414	2023
-Flour-Noodle3		62.392	2023
+
+Materialdescription |  QUANTITY    |  YEAR    	  |  
+--------------------|--------------|--------------|
+Flour-Bread1	    | 	47.166	   |    2023      |
+Flour-Bread4	    |	59.832	   |	2023      |
+Flour-Bread5	    |	48.741	   |	2023      |
+Flour-Bread6	    |	58.575	   |	2023      |
+Flour-CrispyFlour1  |	11.904	   |	2023      |
+Flour-CrispyFlour2  |	30.566	   |	2023      |
+Flour-Feed1	    |	61.919	   |	2023      |
+Flour-Feed3	    |	71.876	   |	2023      |
+Flour-FriedChicken1 |	46.706	   |	2023      |
+Flour-Noodle1	    |	56.414	   |	2023      |
+Flour-Noodle3	    |	62.392	   |	2023      |
 
 🟠 **Q7.** List the total amount of Temperd Wheat produced in the 2023 process.
 ````sql
