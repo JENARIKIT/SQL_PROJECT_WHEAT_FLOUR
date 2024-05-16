@@ -3,20 +3,20 @@
 **📊 DASHBOARD**: https://lookerstudio.google.com/s/v3OtnouAGfM 
 
 
-## รายงานนี้เป็นการใช้ SQL วิเคราะห์ข้อมูลเกี่ยวกับการผลิตแป้งสาลี เช่น ตัวเลขการใช้วัตถุดิบ  ตัวเลขยอดสินค้าที่ผลิตได้ เวลาที่ใช้ในการทำงาน เวลาที่สูญเสียจากกระบวนการผลิต , ค่า OEE , ค่า Performance , ค่า Quality , ค่าAvalidility ในปี 2023
-
-# This report utilizes SQL to analyze data pertaining to wheat flour production in the year 2023, encompassing the following metrics:
-## Quantity of raw materials consumed
-## Number of products manufactured
-## Operational time
-## Production process downtime
-OEE values
-Performance values
-Quality values
-Availability values
+# This report utilizes SQL to analyze data pertaining to wheat flour production in the year 2023, encompassing the following metrics
+   **🟢 Quantity of raw materials consumed** <br />
+   **🟢 Number of products manufactured** <br />
+   **🟢 Operational time** <br />
+   **🟢 Production process downtime** <br />
+   **🟢 OEE values** <br />
+   **🟢 Performance values** <br />
+   **🟢 Quality values** <br />
+   **🟢 Availability** values <br />
 
 
-❗❗ ข้อมูลที่แสดงผลออกมาเป็นเพียงแค่การสมมติขึ้น ❗❗
+**❗❗ This report is based on hypothetical data ❗❗**
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
 
 
 🟠 **Q1.** List the total amount of Raw Material used in 2023 
