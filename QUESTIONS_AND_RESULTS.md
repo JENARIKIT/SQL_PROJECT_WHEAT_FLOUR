@@ -279,7 +279,7 @@ Total_HR |  Total_MIN   |  Total_DAY    |   MonthID   |
 
 
 
-🟠 **Q10.** Total number of working days in 2023
+🟠 **Q10.** List of working days in 2023
 ````sql
 SELECT
 Count(DISTINCT  date) 	AS WorkingDay ,
@@ -306,7 +306,7 @@ WorkingDay |  MonthID |
 25	   |  2023-12 |
 
 
-🟠 **Q11.** Total number of working hours per day (HR/Day) in 2023
+🟠 **Q11.** List of working hours per day (HR/Day) in 2023
 ````sql
 SELECT 
 	R.Total_MIN,
@@ -333,7 +333,7 @@ Total_MI  | Total_HR | Total_DAY  |  WorkingDay | Working_HR_DAY |
 34833.0	  | 580.55   | 	 24.19    |	29    	|	20.02    |
 31833.0	  | 530.55   | 	 22.11    |	25    	|	21.22    |
 
-🟠 **Q12.** Total production downtime in 2023, by group
+🟠 **Q12.** List of production downtime in 2023, by group
 ````sql
 SELECT 
   	GT.DowntimeNo,
@@ -360,7 +360,7 @@ DowntimeNo |  DowntimeDescription |DOWNTIME_MIN |Year|
 11	   |  OTHER 		  |	11846   |2023|
 
 
-🟠 **Q13.** Total number of product transactions in 2023, by transaction type
+🟠 **Q13.** List of product transactions in 2023, by transaction type
 ````sql
 SELECT 
 	T.Trade,
@@ -404,7 +404,7 @@ INTERNATIONAL TRADE  |		2093.337       |   2023-12   |
 
 
 
-🟠**Q14**.IN 2023 USE yield 
+🟠**Q14**. Yield in 2023 
 ````sql
 SELECT 
 	MAT.Materialdescription,
@@ -446,7 +446,7 @@ Flour-Bread5	   |	469.606	    |	36.538	  |	23.571	     |	121.503	   |	664.876	  
 Flour-Bread6	   |	2488.83601  |	259.952	  |	118.064	     |	627.953	   |	3563.765    |	98.06     |
 Flour-Noodle3	   |	1076.342    |	93.942	  |	22.994	     |	263.607	   |	1481.228    |	98.36     |
 
-🟠 **Q15**.IN 2023 USE LOSS IN PROCESS
+🟠 **Q15**.List of Loss in Process in 2023
 ````sql
 SELECT 
 	MAT.Materialdescription,
@@ -494,7 +494,7 @@ Flour-Noodle3	   |	-1076.342   |	-93.942	  |	-22.994	     |	-263.607   |	15.7	  
 
 
 
-🟠 **Q16**.IN 2023 USE OEE
+🟠 **Q16**.Values of OEE, Performance, Quality, and Availability in 2023
 ````sql
 /*CREATE VIEW IN_2023_USE_OEE
 
