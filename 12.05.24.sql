@@ -6,16 +6,14 @@
    OEE values
    Performance values
    Quality values
-   Availability values */
+   Availability values 
 
 
-** This report is based on hypothetical data **
-
-🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾 */
+This report is based on hypothetical data  */
 
 
-🟠 **Q1.** List the total amount of Raw Material used in 2023 
-````sql
+-- Q1.List the total amount of Raw Material used in 2023 
+
 SELECT 
 	M.Materialdescription,
 	ROUND(SUM(F.Quantity)/1000.0,2) AS "QUANTITY_(TON)"
@@ -25,7 +23,7 @@ AND F.Materialdescription like 'RM%'
 AND Date Like '2023%'
 Group by F.Materialdescription
 Order by F.Materialdescription;
-````
+
 🟣**Results:**
 
 Materialdescription  				|QUANTITY_(TON)|
