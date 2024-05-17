@@ -163,11 +163,15 @@ left JOIN Startup
 on FG.RowLabels = Startup.RowLabels
 GROUP BY FG.RowLabels ;
 
-</sql><sql name="Q1">--IN 2023 USE RM (Wheat)
+</sql><sql name="Q1">--IN 2023 USE RM (Wheat)
 
-/*CREATE View IN_2023_USE_RM
-AS*/
-
+
+/*CREATE View IN_2023_USE_RM
+
+AS*/
+
+
+
 SELECT 
 M.Materialdescription,
 ROUND(SUM(F.Quantity)/1000.0,2) AS &quot;QUANTITY_(TON)&quot;,
@@ -177,10 +181,14 @@ WHERE F.MaterialNO = M.Material
 AND F.Materialdescription like 'RM%'
 AND MonthID Like '2023%'
 Group by F.Materialdescription,MonthID
-Order by F.Materialdescription,MonthID;</sql><sql name="Q2">--IN 2023 USE Water
-
-CREATE View IN_2023_USE_Water
-AS
+Order by F.Materialdescription,MonthID;</sql><sql name="Q2">--IN 2023 USE Water
+
+
+
+CREATE View IN_2023_USE_Water
+
+AS
+
 
 SELECT 
 strftime('%Y-%m',StartDate_Cleaning) AS MonthID,
@@ -188,10 +196,13 @@ SUM(Water) AS &quot;Water(MT)&quot;
 From MASTER
 WHERE MonthID like '2023%'
 Group by MonthID
-Order by MonthID;</sql><sql name="Q3">--IN 2023 USE Reprocess
+Order by MonthID;</sql><sql name="Q3">--IN 2023 USE Reprocess
 
-CREATE VIEW IN_2023_USE_Reprocess
-AS
+
+CREATE VIEW IN_2023_USE_Reprocess
+
+AS
+
 
 SELECT 
 strftime('%Y-%m',Date) AS MonthID,
@@ -201,10 +212,14 @@ From FinalTransaction
 WHERE Note = &quot;REPROCESS&quot;
 AND  MonthID like '2023%'
 Group by MonthID
-Order by MonthID;</sql><sql name="Q4-1">--IN 2023 USE Downgrade
-
-CREATE VIEW IN_2023_USE_Downgrade
-AS
+Order by MonthID;</sql><sql name="Q4-1">--IN 2023 USE Downgrade
+
+
+
+CREATE VIEW IN_2023_USE_Downgrade
+
+AS
+
 
 SELECT 
 strftime('%Y-%m',PD.start_date) AS MonthID,
@@ -213,10 +228,14 @@ From ProcessOrder as PD , CleaningFlour as CF
 WHERE PD.ProcessOrder = CF.RowLabels
 AND MonthID like '2023%'
 GROUP BY MonthID
-ORDER by MonthID;</sql><sql name="Q4-2">--IN 2023 USE Downgrade
-
-CREATE Table IN_2023_USE_Downgrade
-AS
+ORDER by MonthID;</sql><sql name="Q4-2">--IN 2023 USE Downgrade
+
+
+
+CREATE Table IN_2023_USE_Downgrade
+
+AS
+
 
 SELECT 
 strftime('%Y-%m',Date) AS MonthID,
@@ -225,10 +244,14 @@ From FinalTransaction
 WHERE Materialdescription like 'Clean%'
 AND  MonthID like '2023%'
 Group by MonthID
-Order by MonthID;</sql><sql name="Q5">--IN 2023 USE ChangeOvertime
-
-CREATE VIEW IN_2023_USE_ChangeOvertime
-AS
+Order by MonthID;</sql><sql name="Q5">--IN 2023 USE ChangeOvertime
+
+
+
+CREATE VIEW IN_2023_USE_ChangeOvertime
+
+AS
+
 
 SELECT 
 count(ProcessOrder),
@@ -238,10 +261,14 @@ WHERE MonthID like '2023%'
 GROUP by MonthID;
 
 
-</sql><sql name="Q6">--IN 2023 USE FG
-
-CREATE VIEW IN_2023_FG
-AS
+</sql><sql name="Q6">--IN 2023 USE FG
+
+
+
+CREATE VIEW IN_2023_FG
+
+AS
+
 
 SELECT 
 	M.Materialdescription,
@@ -252,10 +279,14 @@ WHERE M.Material = P.Material_ID
 AND P.ProcessOrder = FG.RowLabels
 AND YEAR = '2023'
 Group by Material
-Order by Materialdescription;</sql><sql name="Q7">--IN 2023 USE B1
-
-CREATE VIEW IN_2023_USE_B1
-AS
+Order by Materialdescription;</sql><sql name="Q7">--IN 2023 USE B1
+
+
+
+CREATE VIEW IN_2023_USE_B1
+
+AS
+
 
 SELECT 
  Mat.Materialdescription,
@@ -264,24 +295,33 @@ SELECT
  FROM MASTER AS M , ProcessOrder AS P , Material As Mat
  WHERE M.ProcessOrder = P.ProcessOrder
  AND P.Material_ID = Mat.Material
- AND MonthID Like '2023%' 
+ AND MonthID Like '2023%' 
+
  AND Mat.Material != '3100000090' --ไม่เอา &quot;WFC
  Group BY Mat.Materialdescription;
- </sql><sql name="Q8">--IN 2023 USE DOWNTIME
-
-CREATE VIEW IN_2023_USE_DOWNTIME
-AS
+ </sql><sql name="Q8">--IN 2023 USE DOWNTIME
+
+
+
+CREATE VIEW IN_2023_USE_DOWNTIME
+
+AS
+
 
 SELECT 
   Sum(Total_Time) AS DOWNTIME_MIN,
   strftime ('%Y-%m',Date) AS MonthID
 FROM DOWNTIME
-WHERE MonthID Like '2023%'
+WHERE MonthID Like '2023%'
+
 AND DowntimeNo != '11'
 Group by MonthID;
- </sql><sql name="Q9">--IN 2023 USE Runtime
-
-CREATE VIEW IN_2023_USE_Runtime
+ </sql><sql name="Q9">--IN 2023 USE Runtime
+
+
+
+CREATE VIEW IN_2023_USE_Runtime
+
 AS
 
 SELECT 
@@ -292,10 +332,14 @@ SELECT
 FROM MASTER 
 WHERE MonthID Like '2023%'
 Group by MonthID;
- </sql><sql name="Q10">--IN 2023 USE WorkingDAY
-
-CREATE VIEW IN_2023_USE_WorkingDAY
-AS
+ </sql><sql name="Q10">--IN 2023 USE WorkingDAY
+
+
+
+CREATE VIEW IN_2023_USE_WorkingDAY
+
+AS
+
 
 SELECT
 Count(DISTINCT  date),
@@ -303,10 +347,14 @@ strftime('%Y-%m',Date) AS MonthID
 FROM FinalTransaction
 Where MonthID Like '2023%'
 AND Movementtype In ('101','102')
-Group by MonthID;</sql><sql name="Q11">--IN 2023 USE Workig(HR/Day)
-
-CREATE VIEW IN_2023_USE_Workig_HR_Day
-AS
+Group by MonthID;</sql><sql name="Q11">--IN 2023 USE Workig(HR/Day)
+
+
+
+CREATE VIEW IN_2023_USE_Workig_HR_Day
+
+AS
+
 
 SELECT 
 	R.Total_MIN,
@@ -317,10 +365,14 @@ SELECT
 FROM Runtime AS R , WorkingDay AS W 
 WHERE R.MonthID = W.MonthID
 Group by R.MonthID;
- </sql><sql name="Q12">--IN 2023 USE DOWNTIME GROUP
-
-/*CREATE VIEW DOWNTIME_GROUP
-AS */
+ </sql><sql name="Q12">--IN 2023 USE DOWNTIME GROUP
+
+
+
+/*CREATE VIEW DOWNTIME_GROUP
+
+AS */
+
 
 SELECT 
   GT.DowntimeNo,
@@ -332,10 +384,14 @@ WHERE DT.DowntimeNo = GT.DowntimeNo
 AND Year Like '2023%'
 Group by GT.DowntimeNo
 Order By Year;
- </sql><sql name="12.05.24.sql">--IN 2023 USE TRADE
-
-CREATE VIEW IN_2023_USE_TRADE
-AS
+ </sql><sql name="12.05.24.sql">--IN 2023 USE TRADE
+
+
+
+CREATE VIEW IN_2023_USE_TRADE
+
+AS
+
 
 SELECT 
 	T.Trade,
@@ -347,10 +403,14 @@ AND P.ProcessOrder = FG.RowLabels
 AND T.Material = P.Material_ID
 AND MonthID like '2023%'
 Group by T.Trade,MonthID
-Order by MonthID;</sql><sql name="Q14">--IN 2023 USE yield 
-
-/* CREATE VIEW IN_2023_USE_yield 
-AS */
+Order by MonthID;</sql><sql name="Q14">--IN 2023 USE yield 
+
+
+
+/* CREATE VIEW IN_2023_USE_yield 
+
+AS */
+
 
 SELECT 
 	MAT.Materialdescription,
@@ -376,10 +436,14 @@ on PO.Material_ID = MAT.Material
 WHERE Tempwheat &gt; 0 
 Group By MAT.Material;
 
-</sql><sql name="Q15">--IN 2023 USE LOSS IN PROCESS
-
-/* CREATE VIEW IN_2023_USE_LOSS_IN_PROCESS
-AS */
+</sql><sql name="Q15">--IN 2023 USE LOSS IN PROCESS
+
+
+
+/* CREATE VIEW IN_2023_USE_LOSS_IN_PROCESS
+
+AS */
+
 
 SELECT 
 	PO.ProcessOrder,
@@ -409,12 +473,18 @@ on PO.ProcessOrder = RE.PO
 WHERE Tempwheat &gt; 0 
 Group By PO.ProcessOrder;
 
-</sql><sql name="Q16">--IN 2023 USE OEE
-
-/*CREATE VIEW IN_2023_USE_OEE
-AS */
-
---1.สร้างTable B1/Downgrade/FG Join กับ Downtime โดยไม่เอา Group 11 โดยใช้ select ซ้อน select
+</sql><sql name="Q16">--IN 2023 USE OEE
+
+
+
+/*CREATE VIEW IN_2023_USE_OEE
+
+AS */
+
+
+
+--1.สร้างTable B1/Downgrade/FG Join กับ Downtime โดยไม่เอา Group 11 โดยใช้ select ซ้อน select
+
 --2.หาค่า A P Q OEE
 
 --Step1 Create Table Tempwheat
@@ -427,7 +497,8 @@ SELECT
  FROM MASTER AS M , ProcessOrder AS P , Material As Mat
  WHERE M.ProcessOrder = P.ProcessOrder
  AND P.Material_ID = Mat.Material
- AND MonthID Like '2023%'
+ AND MonthID Like '2023%'
+
  AND Mat.Material != '3100000090'
  Group BY MonthID;   */
  -------------------------------------------------------------
@@ -477,7 +548,8 @@ FROM
   strftime ('%Y-%m',Date) AS MonthID
 FROM DOWNTIME AS DT , GroupDT AS GT
 WHERE DT.DowntimeNo = GT.DowntimeNo
-AND MonthID Like '2023%'
+AND MonthID Like '2023%'
+
 AND DT.DowntimeNo != '11' --ไม่เอา Downtimegroup นี้
 Group by MonthID
 Order By MonthID )  AS DT , Runtime AS RT , Tempwheat AS TW ,Downgrade As DG , FG_Recive AS FR
@@ -488,79 +560,154 @@ AND DT.MonthID = FR.MonthID;
  
  
 
-</sql><sql name="D.DOWMTIME ">--IN 2023 USE DOWNTIME GROUP
-
- CREATE VIEW D_DOWNTIME_GROUP
-AS  
-
-SELECT 
-  GT.DowntimeNo,
-  GT.DowntimeDescription,
-  Sum(Total_Time) AS DOWNTIME_MIN,
-  strftime ('%Y%m',Date) AS MonthID
-FROM DOWNTIME AS DT , GroupDT AS GT
-WHERE DT.DowntimeNo = GT.DowntimeNo
-Group by GT.DowntimeDescription,MonthID
-Order By MonthID;</sql><sql name="D.yield">--IN 2023 USE yield 
-
- /* CREATE VIEW D_IN_2023_USE_yield 
-AS */
-
-SELECT 
-    strftime ('%Y-%m',PO.start_date) AS MonthID,
-	MAT.Materialdescription,
-	coalesce (SUM(FG.FGQuatity)/1000.0,0) AS FG,
-	coalesce (SUM(f3.F3Quatity)/1000.0,0) AS FlourCO,
-	coalesce (SUM(CF.SumofQuatity)/1000.0,0) AS CleaningFlour,
-	coalesce (SUM(B.BranQuatity)/1000.0,0) AS Bran,
-	coalesce (SUM(M.Tempwheat),0) AS Tempwheat,
-    Round((((coalesce (SUM(FG.FGQuatity),0))+(coalesce (SUM(f3.F3Quatity),0))+(coalesce (SUM(CF.SumofQuatity),0))+(coalesce (SUM(B.BranQuatity),0)))*-1)/SUM(M.Tempwheat*1000.0)*100.0,2) AS Yield
-FROM FG
-LEFT join ProcessOrder as PO
-on PO.ProcessOrder = FG.RowLabels
-LEFT join F3
-on PO.ProcessOrder = F3.RowLabels
-LEFT join CleaningFlour as CF
-on PO.ProcessOrder = CF.RowLabels
-LEFT join Bran AS B
-on PO.ProcessOrder = B.RowLabels
-LEFT join MASTER AS M
-on PO.ProcessOrder = M.ProcessOrder
-LEFT join Material AS MAT
-on PO.Material_ID = MAT.Material
-WHERE Tempwheat &gt; 0 
-Group By MAT.Material,MonthID;
-
-</sql><sql name="D-quality">
-CREATE View D_quality
-AS
-
-SELECT 
-strftime ('%Y-%m',p.start_date) AS MonthID,
-p.Processorder,
-m.Materialdescription,
-SUM(MC_MB),
-SUM(Ash_NIR),
-SUM(Protein_NIR),
-SUM(WG),
-SUM(WA)
-FROM quality AS Q , Processorder AS P , Material  AS M
-WHERE q.Processorder = p.Processorder
-AND p.Material_ID = m.Material
-GROUP BY P.Processorder ;	</sql><sql name="SQL 29">CREATE VIEW Protien
-AS
-
-SELECT 
-M.Materialdescription,
-P.Country,
-P.Protein,
-P.Price,
-ROUND(SUM(F.Quantity)/1000.0,2) AS &quot;QUANTITY_(TON)&quot;,
-strftime('%Y-%m',F.Date) AS MonthID
-From FinalTransaction as F , Material as M , Protein As P
-WHERE F.MaterialNO = M.Material
-AND F.MaterialNO = P.Material
-AND F.Materialdescription like 'RM%'
-AND MonthID Like '2023%'
-Group by F.Materialdescription,MonthID
+</sql><sql name="D.DOWMTIME ">--IN 2023 USE DOWNTIME GROUP
+
+
+
+ CREATE VIEW D_DOWNTIME_GROUP
+
+AS  
+
+
+
+SELECT 
+
+  GT.DowntimeNo,
+
+  GT.DowntimeDescription,
+
+  Sum(Total_Time) AS DOWNTIME_MIN,
+
+  strftime ('%Y%m',Date) AS MonthID
+
+FROM DOWNTIME AS DT , GroupDT AS GT
+
+WHERE DT.DowntimeNo = GT.DowntimeNo
+
+Group by GT.DowntimeDescription,MonthID
+
+Order By MonthID;</sql><sql name="D.yield">--IN 2023 USE yield 
+
+
+
+ /* CREATE VIEW D_IN_2023_USE_yield 
+
+AS */
+
+
+
+SELECT 
+
+    strftime ('%Y-%m',PO.start_date) AS MonthID,
+
+	MAT.Materialdescription,
+
+	coalesce (SUM(FG.FGQuatity)/1000.0,0) AS FG,
+
+	coalesce (SUM(f3.F3Quatity)/1000.0,0) AS FlourCO,
+
+	coalesce (SUM(CF.SumofQuatity)/1000.0,0) AS CleaningFlour,
+
+	coalesce (SUM(B.BranQuatity)/1000.0,0) AS Bran,
+
+	coalesce (SUM(M.Tempwheat),0) AS Tempwheat,
+
+    Round((((coalesce (SUM(FG.FGQuatity),0))+(coalesce (SUM(f3.F3Quatity),0))+(coalesce (SUM(CF.SumofQuatity),0))+(coalesce (SUM(B.BranQuatity),0)))*-1)/SUM(M.Tempwheat*1000.0)*100.0,2) AS Yield
+
+FROM FG
+
+LEFT join ProcessOrder as PO
+
+on PO.ProcessOrder = FG.RowLabels
+
+LEFT join F3
+
+on PO.ProcessOrder = F3.RowLabels
+
+LEFT join CleaningFlour as CF
+
+on PO.ProcessOrder = CF.RowLabels
+
+LEFT join Bran AS B
+
+on PO.ProcessOrder = B.RowLabels
+
+LEFT join MASTER AS M
+
+on PO.ProcessOrder = M.ProcessOrder
+
+LEFT join Material AS MAT
+
+on PO.Material_ID = MAT.Material
+
+WHERE Tempwheat &gt; 0 
+
+Group By MAT.Material,MonthID;
+
+
+
+</sql><sql name="D-quality">
+
+CREATE View D_quality
+
+AS
+
+
+
+SELECT 
+
+strftime ('%Y-%m',p.start_date) AS MonthID,
+
+p.Processorder,
+
+m.Materialdescription,
+
+SUM(MC_MB),
+
+SUM(Ash_NIR),
+
+SUM(Protein_NIR),
+
+SUM(WG),
+
+SUM(WA)
+
+FROM quality AS Q , Processorder AS P , Material  AS M
+
+WHERE q.Processorder = p.Processorder
+
+AND p.Material_ID = m.Material
+
+GROUP BY P.Processorder ;	</sql><sql name="SQL 29">CREATE VIEW Protien
+
+AS
+
+
+
+SELECT 
+
+M.Materialdescription,
+
+P.Country,
+
+P.Protein,
+
+P.Price,
+
+ROUND(SUM(F.Quantity)/1000.0,2) AS &quot;QUANTITY_(TON)&quot;,
+
+strftime('%Y-%m',F.Date) AS MonthID
+
+From FinalTransaction as F , Material as M , Protein As P
+
+WHERE F.MaterialNO = M.Material
+
+AND F.MaterialNO = P.Material
+
+AND F.Materialdescription like 'RM%'
+
+AND MonthID Like '2023%'
+
+Group by F.Materialdescription,MonthID
+
 Order by F.Materialdescription,MonthID;</sql><current_tab id="7"/></tab_sql></sqlb_project>
