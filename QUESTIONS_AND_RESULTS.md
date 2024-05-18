@@ -1,22 +1,23 @@
-# 🌾 PRODUCTION OF WHEAT FLOUR 🌾 
+# 🌾 PRODUCTION OF WHEAT FLOUR 
 
 ## 📊 DASHBOARD ▶  https://lookerstudio.google.com/s/v3OtnouAGfM 
 
 
 ## This report utilizes SQL to analyze data pertaining to wheat flour production in the year 2023, encompassing the following metrics
-   **◼️ Quantity of raw materials consumed** <br /> 
-   **◼️ Number of products manufactured** <br />
-   **◼️ Operational time** <br />
-   **◼️ Production process downtime** <br />
-   **◼️ OEE values** <br />
-   **◼️ Performance values** <br />
-   **◼️ Quality values** <br />
-   **◼️ Availability** values <br />
+   **🔸 Quantity of raw materials consumed** <br /> 
+   **🔸 Number of products manufactured** <br />
+   **🔸 Operational time** <br />
+   **🔸 Production process downtime** <br />
+   **🔸 OEE values** <br />
+   **🔸 Performance values** <br />
+   **🔸 Quality values** <br />
+   **🔸 Availability** values <br />
 
 
 **❗❗ This report is based on hypothetical data ❗❗**
 
-🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾 
+
 
 🟠 **Q1.** List the total amount of Raw Material used in 2023 
 ````sql
