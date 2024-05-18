@@ -1,6 +1,8 @@
-# 🌾 PRODUCTION OF WHEAT FLOUR 
+# <p align="center">🌾 PRODUCTION OF WHEAT FLOUR 🌾 </p>
 
 ## 📊 DASHBOARD ▶  https://lookerstudio.google.com/s/v3OtnouAGfM 
+
+# <p align="center">![pic](https://www.thespruceeats.com/thmb/w5ijhrBbjskBUwTToMpWYsE8llE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/wheat-and-flour-g2k-57bb87385f9b58cdfd6ab04b.jpg)</p>
 
 
 ## This report utilizes SQL to analyze data pertaining to wheat flour production in the year 2023, encompassing the following metrics
