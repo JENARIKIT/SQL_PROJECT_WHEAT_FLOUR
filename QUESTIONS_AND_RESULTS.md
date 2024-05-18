@@ -22,6 +22,8 @@
 
 
 ## 🟠 **Q1.** List the total amount of Raw Material used in 2023 
+
+ 
 ````sql
 SELECT 
 	M.Materialdescription,
@@ -33,7 +35,12 @@ AND Date Like '2023%'
 Group by F.Materialdescription
 Order by F.Materialdescription;
 ````
+
+	
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
 
 Materialdescription  				|QUANTITY_(TON)|
 ------------------------------------------------|--------------|
@@ -50,6 +57,7 @@ UNION WHEAT 10.5%				|  3108.62     |
 UNION WHEAT 12.5%				| 19300.13     |
 WESTERN WHITE 10.5%				|   100.39     |
 
+</details>
 
 ## 🟠 **Q2.** List the total amount of Water used in 2023 
 ````sql
@@ -62,7 +70,11 @@ Group by MonthID
 Order by MonthID;</sql><sql name="Q3">--IN 2023 USE Reprocess 
 ````
 
+
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
 
 MonthID		    |Water(MT)	  |
 -------------------|--------------|
@@ -79,6 +91,9 @@ MonthID		    |Water(MT)	  |
 2023-11	     	   |238.089	  |
 2023-12		   |196.175	  | 
 
+</details>
+
+
 ## 🟠 **Q3.** List the total amount of Reprocess-Product used in Process 2023
 ````sql
 SELECT 
@@ -92,6 +107,9 @@ Group by MonthID
 Order by MonthID;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
 
 MonthID		    |Quantity(MT)  | Note	  |
 --------------------|--------------|--------------|
@@ -108,6 +126,7 @@ MonthID		    |Quantity(MT)  | Note	  |
 2023-11	            |41.29	   |REPROCESS	  |
 2023-12	            |62.58	   |REPROCESS	  |
 
+</details>
 
 ## 🟠 **Q4.** List the total amount of Downgrade produced in the 2023 process.
 ````sql
@@ -121,6 +140,9 @@ GROUP BY MonthID
 ORDER by MonthID;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
 
 MonthID		    |Quantity(MT)  | 
 --------------------|--------------|
@@ -137,6 +159,8 @@ MonthID		    |Quantity(MT)  |
 2023-11		    |126.537	   |
 2023-12		    |64.744	   |
 
+</details>
+
 
 ## 🟠 **Q5.** IN 2023 USE ChangeOvertime
 ````sql
@@ -149,6 +173,10 @@ GROUP by MonthID;
 ````
 
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
+	
 Change_Overtimes    |  MonthID     | 
 --------------------|--------------|
 54		    |2023-01	   |
@@ -163,6 +191,9 @@ Change_Overtimes    |  MonthID     |
 59	 	    |2023-10	   |
 66		    |2023-11	   |
 50		    |2023-12	   |
+
+</details>
+
 
 ## 🟠 **Q6.** List the total amount of Finished goods produced in the 2023 process.
 ````sql
@@ -180,6 +211,9 @@ Order by Materialdescription;
 
 ## 🟣**Results:**
 
+<details>
+  <summary>Click to expand results!</summary>
+
 Materialdescription |  QUANTITY    |  YEAR    	  |  
 --------------------|--------------|--------------|
 Flour-Bread1	    | 	47.166	   |    2023      |
@@ -193,6 +227,9 @@ Flour-Feed3	    |	71.876	   |	2023      |
 Flour-FriedChicken1 |	46.706	   |	2023      |
 Flour-Noodle1	    |	56.414	   |	2023      |
 Flour-Noodle3	    |	62.392	   |	2023      |
+
+</details>
+
 
 ## 🟠 **Q7.** List the total amount of Temperd Wheat produced in the 2023 process.
 ````sql
@@ -210,6 +247,9 @@ SELECT
 ````
 ## 🟣**Results:**
 
+<details>
+  <summary>Click to expand results!</summary>
+
 Materialdescription |  Tempwheat   |  MonthID     |  
 --------------------|--------------|--------------|
 Flour-Bread1	    |	70.021	   |	2023      |
@@ -224,6 +264,8 @@ Flour-FriedChicken1 |	76.784	   |	2023      |
 Flour-Noodle1	    |	87.622	   |	2023      |
 Flour-Noodle3	    |	88.768	   |	2023      |
 
+</details>
+
 
 ## 🟠 **Q8.** List the total amount of Downtime in Production process of 2023.
 ````sql
@@ -236,6 +278,9 @@ AND DowntimeNo != '11'
 Group by MonthID;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
 
 DOWNTIME_MIN        |  MonthID     | 
 --------------------|--------------|
@@ -251,6 +296,8 @@ DOWNTIME_MIN        |  MonthID     |
 1287   		    |	2023-11    |
 661   		    |	2023-12    |
 
+</details>
+
 
 ## 🟠 **Q9.** List the total amount of Runtime used in Process 2023
 ````sql
@@ -264,6 +311,11 @@ WHERE MonthID Like '2023%'
 Group by MonthID;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
+
+ 
 Total_HR |  Total_MIN   |  Total_DAY    |   MonthID   |
 ---------|--------------|---------------|-------------| 
 402.04   |	24122.0 |	16.75	|   2023-01   |
@@ -279,6 +331,7 @@ Total_HR |  Total_MIN   |  Total_DAY    |   MonthID   |
 580.55   |	34833.0 |	24.19	|   2023-11   |
 530.55   |	31833.0 |	22.11	|   2023-12   |
 
+</details>
 
 
 ## 🟠 **Q10.** List of working days in 2023
@@ -292,6 +345,10 @@ AND Movementtype In ('101','102')
 Group by MonthID;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
+	
 WorkingDay |  MonthID | 
 -----------|----------|
 25	   |  2023-01 |
@@ -307,6 +364,8 @@ WorkingDay |  MonthID |
 29	   |  2023-11 |
 25	   |  2023-12 |
 
+</details>
+
 
 ## 🟠 **Q11.** List of working hours per day (HR/Day) in 2023
 ````sql
@@ -321,6 +380,10 @@ WHERE R.MonthID = W.MonthID
 Group by R.MonthID;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
+	
 Total_MI  | Total_HR | Total_DAY  |  WorkingDay | Working_HR_DAY | 
 ----------|----------|------------|-------------|----------------|
 24122.0	  | 402.04   |   16.75    | 	25    	|	16.08    |
@@ -334,6 +397,8 @@ Total_MI  | Total_HR | Total_DAY  |  WorkingDay | Working_HR_DAY |
 37403.0	  | 623.39   | 	 25.97    |	31    	|	20.11    |
 34833.0	  | 580.55   | 	 24.19    |	29    	|	20.02    |
 31833.0	  | 530.55   | 	 22.11    |	25    	|	21.22    |
+
+</details>
 
 ## 🟠 **Q12.** List of production downtime in 2023, by group
 ````sql
@@ -349,6 +414,11 @@ Group by GT.DowntimeNo
 Order By Year;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
+
+ 
 DowntimeNo |  DowntimeDescription |DOWNTIME_MIN |Year| 
 -----------|----------------------|-------------|----|
 1	   |  MECHANICAL LOSSES   |	263     |2023|
@@ -361,6 +431,7 @@ DowntimeNo |  DowntimeDescription |DOWNTIME_MIN |Year|
 8	   |  CLEAR_LINE_UNPLAN   | 	549     |2023|
 11	   |  OTHER 		  |	11846   |2023|
 
+</details>
 
 ## 🟠 **Q13.** List of product transactions in 2023, by transaction type
 ````sql
@@ -377,6 +448,10 @@ Group by T.Trade,MonthID
 Order by MonthID;
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
+	
 TRADE	             |  QUANTITY	       |   MonthID   |
 ---------------------|-------------------------|-------------|
 DOMESTIC TRADE	     |		882.049	       |   2023-01   |
@@ -404,6 +479,7 @@ INTERNATIONAL TRADE  |		2144.641       |   2023-11   |
 DOMESTIC TRADE	     |		863.639	       |   2023-12   |
 INTERNATIONAL TRADE  |		2093.337       |   2023-12   |
 
+</details>
 
 
 ## 🟠**Q14**. Yield in 2023 
@@ -434,6 +510,9 @@ Group By MAT.Material;
 ````
 ## 🟣**Results:**
 
+<details>
+  <summary>Click to expand results!</summary>
+
 Materialdescription|        FG      |    FlourCO  |   CleaningFlour  |    Bran     |   Tempwheat    |   Yield     | 
 -------------------|----------------|-------------|------------------|-------------|----------------|-------------|
 Flour-Bread1	   |	7348.32501  |	670.35801 |	313.96101    |	2014.101   |	10661.471   |	97.05     |
@@ -447,6 +526,9 @@ Flour-Bread4	   |	4850.44401  |	700.66    |	226.525	     |	1243.7	   |	7165.491 
 Flour-Bread5	   |	469.606	    |	36.538	  |	23.571	     |	121.503	   |	664.876	    |	97.95     |
 Flour-Bread6	   |	2488.83601  |	259.952	  |	118.064	     |	627.953	   |	3563.765    |	98.06     |
 Flour-Noodle3	   |	1076.342    |	93.942	  |	22.994	     |	263.607	   |	1481.228    |	98.36     |
+
+</details>
+
 
 ## 🟠 **Q15**.List of Loss in Process in 2023
 ````sql
@@ -480,6 +562,9 @@ Group By Materialdescription;
 ````
 ## 🟣**Results:**
 
+<details>
+  <summary>Click to expand results!</summary>
+
 Materialdescription|       FG	    |   FlourCO   |   CleaningFlour  |      Bran   |   Reprocess   |   Tempwheat    |LOSS_IN_PROCESS | 
 -------------------|----------------|-------------|------------------|-------------|---------------|----------------|----------------|
 Flour-Bread1 	   |	-7348.32501 | -670.35801  |	-313.96101   |	-2014.101  |	7.75	   |	10661.471   |	-322.48      |
@@ -494,7 +579,7 @@ Flour-FriedChicken1|	-835.01501  |	-192.354  |	-38.464	     |	-244.425   |	8.04	
 Flour-Noodle1	   |	-3773.281   |	-966.235  |	-149.355     |	-1069.038  |	32.75	   |	6118.562    |	-193.4       |
 Flour-Noodle3	   |	-1076.342   |	-93.942	  |	-22.994	     |	-263.607   |	15.7	   |	1481.228    |	-40.04       |
 
-
+</details>
 
 ## 🟠 **Q16**.Values of OEE, Performance, Quality, and Availability in 2023
 ````sql
@@ -579,6 +664,11 @@ AND DT.MonthID = FR.MonthID;
 
 ````
 ## 🟣**Results:**
+
+<details>
+  <summary>Click to expand results!</summary>
+
+ 
 MonthID |RUNTIME_HR|DownTime_HR|   A   | Tempwheat|       P     | Downgrade |FG_Recive   |   Q  |  OEE |
 --------|----------|-----------|-------|----------|-------------|-----------|------------|------|------|
 2023-01	|  402.04  |	8.28   | 97.98 | 4281.25  |	96.81   |  123.889  |	3258.434 | 96.2 | 91.25|
@@ -593,4 +683,6 @@ MonthID |RUNTIME_HR|DownTime_HR|   A   | Tempwheat|       P     | Downgrade |FG_
 2023-10	|  623.39  |	24.07  | 96.28 | 4452.13  |	64.93   |  108.439  |	3196.93	 | 96.61| 60.39|
 2023-11	|  580.55  |	21.45  | 96.44 | 4948.74  |	77.49   |  126.537  |	3487.866 | 96.37| 72.02|
 2023-12	|  530.55  |	11.02  | 97.97 | 4043.1   | 	69.28   |  64.744   |	2956.976 | 97.81| 66.38|
+
+</details>
 
