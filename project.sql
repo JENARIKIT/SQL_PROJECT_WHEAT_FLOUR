@@ -13,6 +13,8 @@ AND MonthID Like '2023%'
 Group by F.Materialdescription,MonthID
 Order by F.Materialdescription,MonthID;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 --Q2. List the total amount of Water used in 2023
 
 /* CREATE View IN_2023_USE_Water
@@ -26,6 +28,7 @@ WHERE MonthID like '2023%'
 Group by MonthID
 Order by MonthID;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Q3. List the total amount of Reprocess-Product used in Process 2023
 
@@ -42,6 +45,7 @@ AND  MonthID like '2023%'
 Group by MonthID
 Order by MonthID;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 --Q4. List the total amount of Downgrade produced in the 2023 process.
 
@@ -57,6 +61,8 @@ AND MonthID like '2023%'
 GROUP BY MonthID
 ORDER by MonthID;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Q5. IN 2023 USE ChangeOvertime
 
  /* CREATE VIEW IN_2023_USE_ChangeOvertime
@@ -68,6 +74,8 @@ strftime('%Y-%m',start_date)AS MonthID
 FROM ProcessOrder
 WHERE MonthID like '2023%'
 GROUP by MonthID;
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 --Q6. List the total amount of Finished goods produced in the 2023 process.
 
@@ -85,6 +93,7 @@ AND YEAR = '2023'
 Group by Material
 Order by Materialdescription;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 --Q7. List the total amount of Temperd Wheat produced in the 2023 process.
 
@@ -101,7 +110,8 @@ SELECT
  AND MonthID Like '2023%' 
  AND Mat.Material != '3100000090' --ไม่เอา "WFC
  Group BY Mat.Materialdescription;
- 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
  
  -- Q8. List the total amount of Downtime in Production process of 2023.
 
@@ -116,6 +126,8 @@ WHERE MonthID Like '2023%'
 AND DowntimeNo != '11'
 Group by MonthID;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Q9. List the total amount of Runtime used in Process 2023
 
 /* CREATE VIEW IN_2023_USE_Runtime
@@ -129,8 +141,9 @@ SELECT
 FROM MASTER 
 WHERE MonthID Like '2023%'
 Group by MonthID;
- 
- 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
  --Q10. List of working days in 2023
 
 /* CREATE VIEW IN_2023_USE_WorkingDAY
@@ -144,8 +157,8 @@ FROM FinalTransaction
 Where MonthID Like '2023%'
 AND Movementtype In ('101','102')
 Group by MonthID;
- 
- 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
  
 --Q11. List of working hours per day (HR/Day) in 2023
 
@@ -161,8 +174,9 @@ SELECT
 FROM Runtime AS R , WorkingDay AS W 
 WHERE R.MonthID = W.MonthID
 Group by R.MonthID;
- 
- 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
 --Q12. List of production downtime in 2023, by group
 
 /*CREATE VIEW DOWNTIME_GROUP
@@ -179,6 +193,8 @@ AND Year Like '2023%'
 Group by GT.DowntimeNo
 Order By Year;
  
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 
  --Q13. List of product transactions in 2023, by transaction type
 
@@ -199,6 +215,7 @@ AND MonthID like '2023%'
 Group by T.Trade,MonthID
 Order by MonthID;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 --Q14. Yield in 2023
 
@@ -229,6 +246,7 @@ on PO.Material_ID = MAT.Material
 WHERE Tempwheat > 0 
 Group By MAT.Material;
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 --Q15.List of Loss in Process in 2023
 
@@ -263,6 +281,8 @@ on PO.ProcessOrder = RE.PO
 WHERE Tempwheat > 0 
 Group By PO.ProcessOrder;
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 --Q16.Values of OEE, Performance, Quality, and Availability in 2023
 
