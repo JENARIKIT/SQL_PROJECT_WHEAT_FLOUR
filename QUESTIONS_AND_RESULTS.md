@@ -21,7 +21,7 @@
 🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾 
 
 
-🟠 **Q1.** List the total amount of Raw Material used in 2023 
+## 🟠 **Q1.** List the total amount of Raw Material used in 2023 
 ````sql
 SELECT 
 	M.Materialdescription,
@@ -33,7 +33,7 @@ AND Date Like '2023%'
 Group by F.Materialdescription
 Order by F.Materialdescription;
 ````
-🟣**Results:**
+## 🟣**Results:**
 
 Materialdescription  				|QUANTITY_(TON)|
 ------------------------------------------------|--------------|
@@ -51,7 +51,7 @@ UNION WHEAT 12.5%				| 19300.13     |
 WESTERN WHITE 10.5%				|   100.39     |
 
 
-🟠 **Q2.** List the total amount of Water used in 2023 
+## 🟠 **Q2.** List the total amount of Water used in 2023 
 ````sql
 SELECT 
 	strftime('%Y-%m',StartDate_Cleaning)   AS MonthID,
@@ -62,7 +62,7 @@ Group by MonthID
 Order by MonthID;</sql><sql name="Q3">--IN 2023 USE Reprocess 
 ````
 
-🟣**Results:**
+## 🟣**Results:**
 
 MonthID		    |Water(MT)	  |
 -------------------|--------------|
@@ -79,7 +79,7 @@ MonthID		    |Water(MT)	  |
 2023-11	     	   |238.089	  |
 2023-12		   |196.175	  | 
 
-🟠 **Q3.** List the total amount of Reprocess-Product used in Process 2023
+## 🟠 **Q3.** List the total amount of Reprocess-Product used in Process 2023
 ````sql
 SELECT 
 	strftime('%Y-%m',Date) 		  AS MonthID,
@@ -91,7 +91,7 @@ AND  MonthID like '2023%'
 Group by MonthID
 Order by MonthID;
 ````
-🟣**Results:**
+## 🟣**Results:**
 
 MonthID		    |Quantity(MT)  | Note	  |
 --------------------|--------------|--------------|
@@ -109,7 +109,7 @@ MonthID		    |Quantity(MT)  | Note	  |
 2023-12	            |62.58	   |REPROCESS	  |
 
 
-🟠 **Q4.** List the total amount of Downgrade produced in the 2023 process.
+## 🟠 **Q4.** List the total amount of Downgrade produced in the 2023 process.
 ````sql
 SELECT 
 	strftime('%Y-%m',PD.start_date) 		AS MonthID,
@@ -120,7 +120,7 @@ AND MonthID like '2023%'
 GROUP BY MonthID
 ORDER by MonthID;
 ````
-🟣**Results:**
+## 🟣**Results:**
 
 MonthID		    |Quantity(MT)  | 
 --------------------|--------------|
@@ -138,7 +138,7 @@ MonthID		    |Quantity(MT)  |
 2023-12		    |64.744	   |
 
 
-🟠 **Q5.** IN 2023 USE ChangeOvertime
+## 🟠 **Q5.** IN 2023 USE ChangeOvertime
 ````sql
 SELECT 
 	count(ProcessOrder)		 AS Change_Overtimes,
@@ -148,7 +148,7 @@ WHERE MonthID like '2023%'
 GROUP by MonthID;
 ````
 
-🟣**Results:**
+## 🟣**Results:**
 Change_Overtimes    |  MonthID     | 
 --------------------|--------------|
 54		    |2023-01	   |
@@ -164,7 +164,7 @@ Change_Overtimes    |  MonthID     |
 66		    |2023-11	   |
 50		    |2023-12	   |
 
-🟠 **Q6.** List the total amount of Finished goods produced in the 2023 process.
+## 🟠 **Q6.** List the total amount of Finished goods produced in the 2023 process.
 ````sql
 SELECT 
 	M.Materialdescription,
@@ -178,7 +178,7 @@ Group by Material
 Order by Materialdescription;
 ````
 
-🟣**Results:**
+## 🟣**Results:**
 
 Materialdescription |  QUANTITY    |  YEAR    	  |  
 --------------------|--------------|--------------|
@@ -194,7 +194,7 @@ Flour-FriedChicken1 |	46.706	   |	2023      |
 Flour-Noodle1	    |	56.414	   |	2023      |
 Flour-Noodle3	    |	62.392	   |	2023      |
 
-🟠 **Q7.** List the total amount of Temperd Wheat produced in the 2023 process.
+## 🟠 **Q7.** List the total amount of Temperd Wheat produced in the 2023 process.
 ````sql
 SELECT 
  	Mat.Materialdescription,
@@ -208,7 +208,7 @@ SELECT
  AND Mat.Material != '3100000090' --ไม่เอา &quot;WFC
  Group BY Mat.Materialdescription;
 ````
-🟣**Results:**
+## 🟣**Results:**
 
 Materialdescription |  Tempwheat   |  MonthID     |  
 --------------------|--------------|--------------|
@@ -225,7 +225,7 @@ Flour-Noodle1	    |	87.622	   |	2023      |
 Flour-Noodle3	    |	88.768	   |	2023      |
 
 
-🟠 **Q8.** List the total amount of Downtime in Production process of 2023.
+## 🟠 **Q8.** List the total amount of Downtime in Production process of 2023.
 ````sql
 SELECT 
   Sum(Total_Time) AS DOWNTIME_MIN,
@@ -235,7 +235,7 @@ WHERE MonthID Like '2023%'
 AND DowntimeNo != '11'
 Group by MonthID;
 ````
-🟣**Results:**
+## 🟣**Results:**
 
 DOWNTIME_MIN        |  MonthID     | 
 --------------------|--------------|
@@ -252,7 +252,7 @@ DOWNTIME_MIN        |  MonthID     |
 661   		    |	2023-12    |
 
 
-🟠 **Q9.** List the total amount of Runtime used in Process 2023
+## 🟠 **Q9.** List the total amount of Runtime used in Process 2023
 ````sql
 SELECT 
 	SUM(Total_HR) AS Total_HR ,
@@ -263,7 +263,7 @@ FROM MASTER
 WHERE MonthID Like '2023%'
 Group by MonthID;
 ````
-🟣**Results:**
+## 🟣**Results:**
 Total_HR |  Total_MIN   |  Total_DAY    |   MonthID   |
 ---------|--------------|---------------|-------------| 
 402.04   |	24122.0 |	16.75	|   2023-01   |
@@ -281,7 +281,7 @@ Total_HR |  Total_MIN   |  Total_DAY    |   MonthID   |
 
 
 
-🟠 **Q10.** List of working days in 2023
+## 🟠 **Q10.** List of working days in 2023
 ````sql
 SELECT
 Count(DISTINCT  date) 	AS WorkingDay ,
@@ -291,7 +291,7 @@ Where MonthID Like '2023%'
 AND Movementtype In ('101','102')
 Group by MonthID;
 ````
-🟣**Results:**
+## 🟣**Results:**
 WorkingDay |  MonthID | 
 -----------|----------|
 25	   |  2023-01 |
@@ -308,7 +308,7 @@ WorkingDay |  MonthID |
 25	   |  2023-12 |
 
 
-🟠 **Q11.** List of working hours per day (HR/Day) in 2023
+## 🟠 **Q11.** List of working hours per day (HR/Day) in 2023
 ````sql
 SELECT 
 	R.Total_MIN,
@@ -320,7 +320,7 @@ FROM Runtime AS R , WorkingDay AS W
 WHERE R.MonthID = W.MonthID
 Group by R.MonthID;
 ````
-🟣**Results:**
+## 🟣**Results:**
 Total_MI  | Total_HR | Total_DAY  |  WorkingDay | Working_HR_DAY | 
 ----------|----------|------------|-------------|----------------|
 24122.0	  | 402.04   |   16.75    | 	25    	|	16.08    |
@@ -335,7 +335,7 @@ Total_MI  | Total_HR | Total_DAY  |  WorkingDay | Working_HR_DAY |
 34833.0	  | 580.55   | 	 24.19    |	29    	|	20.02    |
 31833.0	  | 530.55   | 	 22.11    |	25    	|	21.22    |
 
-🟠 **Q12.** List of production downtime in 2023, by group
+## 🟠 **Q12.** List of production downtime in 2023, by group
 ````sql
 SELECT 
   	GT.DowntimeNo,
@@ -348,7 +348,7 @@ AND Year Like '2023%'
 Group by GT.DowntimeNo
 Order By Year;
 ````
-🟣**Results:**
+## 🟣**Results:**
 DowntimeNo |  DowntimeDescription |DOWNTIME_MIN |Year| 
 -----------|----------------------|-------------|----|
 1	   |  MECHANICAL LOSSES   |	263     |2023|
@@ -362,7 +362,7 @@ DowntimeNo |  DowntimeDescription |DOWNTIME_MIN |Year|
 11	   |  OTHER 		  |	11846   |2023|
 
 
-🟠 **Q13.** List of product transactions in 2023, by transaction type
+## 🟠 **Q13.** List of product transactions in 2023, by transaction type
 ````sql
 SELECT 
 	T.Trade,
@@ -376,7 +376,7 @@ AND MonthID like '2023%'
 Group by T.Trade,MonthID
 Order by MonthID;
 ````
-🟣**Results:**
+## 🟣**Results:**
 TRADE	             |  QUANTITY	       |   MonthID   |
 ---------------------|-------------------------|-------------|
 DOMESTIC TRADE	     |		882.049	       |   2023-01   |
@@ -406,7 +406,7 @@ INTERNATIONAL TRADE  |		2093.337       |   2023-12   |
 
 
 
-🟠**Q14**. Yield in 2023 
+## 🟠**Q14**. Yield in 2023 
 ````sql
 SELECT 
 	MAT.Materialdescription,
@@ -432,7 +432,7 @@ on PO.Material_ID = MAT.Material
 WHERE Tempwheat > 0 
 Group By MAT.Material;
 ````
-🟣**Results:**
+## 🟣**Results:**
 
 Materialdescription|        FG      |    FlourCO  |   CleaningFlour  |    Bran     |   Tempwheat    |   Yield     | 
 -------------------|----------------|-------------|------------------|-------------|----------------|-------------|
@@ -448,7 +448,7 @@ Flour-Bread5	   |	469.606	    |	36.538	  |	23.571	     |	121.503	   |	664.876	  
 Flour-Bread6	   |	2488.83601  |	259.952	  |	118.064	     |	627.953	   |	3563.765    |	98.06     |
 Flour-Noodle3	   |	1076.342    |	93.942	  |	22.994	     |	263.607	   |	1481.228    |	98.36     |
 
-🟠 **Q15**.List of Loss in Process in 2023
+## 🟠 **Q15**.List of Loss in Process in 2023
 ````sql
 SELECT 
 	MAT.Materialdescription,
@@ -478,7 +478,7 @@ WHERE Tempwheat > 0
 Group By Materialdescription;
 
 ````
-🟣**Results:**
+## 🟣**Results:**
 
 Materialdescription|       FG	    |   FlourCO   |   CleaningFlour  |      Bran   |   Reprocess   |   Tempwheat    |LOSS_IN_PROCESS | 
 -------------------|----------------|-------------|------------------|-------------|---------------|----------------|----------------|
@@ -496,7 +496,7 @@ Flour-Noodle3	   |	-1076.342   |	-93.942	  |	-22.994	     |	-263.607   |	15.7	  
 
 
 
-🟠 **Q16**.Values of OEE, Performance, Quality, and Availability in 2023
+## 🟠 **Q16**.Values of OEE, Performance, Quality, and Availability in 2023
 ````sql
 /*CREATE VIEW IN_2023_USE_OEE
 
@@ -578,7 +578,7 @@ AND DT.MonthID = FR.MonthID;
  
 
 ````
-🟣**Results:**
+## 🟣**Results:**
 MonthID |RUNTIME_HR|DownTime_HR|   A   | Tempwheat|       P     | Downgrade |FG_Recive   |   Q  |  OEE |
 --------|----------|-----------|-------|----------|-------------|-----------|------------|------|------|
 2023-01	|  402.04  |	8.28   | 97.98 | 4281.25  |	96.81   |  123.889  |	3258.434 | 96.2 | 91.25|
