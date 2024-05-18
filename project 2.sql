@@ -1,7 +1,4 @@
-Create Table project
-AS
-
-/* (Q1. List the total amount of Raw Material used in 2023
+--Q1. List the total amount of Raw Material used in 2023
 
 CREATE View IN_2023_USE_RM
 AS
