@@ -1,12 +1,12 @@
 # <p align="center">🌾 PRODUCTION OF WHEAT FLOUR 🌾 </p>
 
-## [📊 DASHBOARD-LOOKERSTUDIO](https://lookerstudio.google.com/s/v3OtnouAGfM) <br /> [🖥️ SQL ANALYSIS (CODE)](https://github.com/JENARIKIT/SQL_PROJECT_DATA/blob/main/SQL/PROJECT.sql)
+## [📊 DASHBOARD-LOOKERSTUDIO](https://lookerstudio.google.com/s/v3OtnouAGfM) <br /> [🖥️ SQL ANALYSIS (CODE)](https://github.com/JENARIKIT/SQL_PROJECT_DATA/blob/main/SQL/PROJECT.sql) <br />  [:star: ANALYSIS ON POWER BI](https://github.com/JENARIKIT/SQL_PROJECT_DATA/blob/main/Analysis%20on%20Power%20BI.pdf)
 
 # <p align="center">![pic](https://www.thespruceeats.com/thmb/w5ijhrBbjskBUwTToMpWYsE8llE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/wheat-and-flour-g2k-57bb87385f9b58cdfd6ab04b.jpg)</p>
 
 
 ## This report utilizes SQL to analyze data pertaining to wheat flour production in the year 2023, encompassing the following metrics
-   **🔸 Quantity of raw materials consumed** <br /> 
+   **🔸 Quantity of raw materials consumed** <br />  
    **🔸 Number of products manufactured** <br />
    **🔸 Operational time** <br />
    **🔸 Production process downtime** <br />
