@@ -2,6 +2,7 @@
 
 # <p align="center">![pic](https://www.thespruceeats.com/thmb/w5ijhrBbjskBUwTToMpWYsE8llE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/wheat-and-flour-g2k-57bb87385f9b58cdfd6ab04b.jpg)</p>
 
+## 🔧 **Tools Used**:  SQLite , Power BI , Looker Studio 
 
    **🔸 Quantity of raw materials consumed**  
    **🔸 Number of products manufactured** <br>
